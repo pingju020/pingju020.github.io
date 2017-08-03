@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/pingju020/pingju020.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## [Objective-C知识集合](https://github.com/pingju020/pingju020.github.io/edit/master/Objective-C知识集合.md)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+`2017年8月3日`
 
-### Markdown
+网上看到个帖子[《招聘一个靠谱的 iOS》](http://blog.sunnyxx.com/2015/07/04/ios-interview/)，里面给出了一系列看似很基础，实则很考察技术水平的面试题。鉴于第一次作答给出的答案并不完全精确，故而萌生了将基础知识再复习一遍，顺带整理个list出来，作为自己温故基础知识的手册。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+一点点来，目前只整理了@property和copy相关的知识，持续更新中...
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pingju020/pingju020.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[阅读原文](https://github.com/pingju020/pingju020.github.io/edit/master/Objective-C知识集合.md)
