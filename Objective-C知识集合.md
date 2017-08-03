@@ -1,14 +1,5 @@
 ---
-author: pingju020
-comments: true
-date: 2017-08-03 17:42:32+00:00
-layout: post
-title: Objective-C基础知识大集合
-categories:
-- Works
-- Tech
-tags:
-- Objective-C
+layout: default
 ---
 
 #Objective-C基础知识大集合
