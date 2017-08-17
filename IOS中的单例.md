@@ -82,7 +82,7 @@ cocoa 框架中我们常用的单例有：
 
 “懒加载”实质就是普通意义上的“懒汉式”，是指实例对象在使用时才创建初始化的实例化方式。如下就是普通懒加载实现单例模式的代码示例：
 
-``` Objective-C
+``` IOS
 //
 //  Singleton.m
 //  testSingleton
@@ -113,7 +113,7 @@ static Singleton* _instance = nil;
 
 要实现线程安全的懒加载，可以使用@synchronized，示例代码如下：
 
-``` Objective-C
+``` JAVA
 //
 //  Singleton.m
 //  testSingleton
@@ -146,7 +146,7 @@ static Singleton* _instance = nil;
 
 由于上面提到的原因，这里我们引入双重检测懒加载式单例实现方法，示例代码如下：
 
-``` Objective-C
+``` JS
 //
 //  Singleton.m
 //  testCopy
