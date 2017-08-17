@@ -83,6 +83,7 @@ cocoa 框架中我们常用的单例有：
 “懒加载”实质就是普通意义上的“懒汉式”，是指实例对象在使用时才创建初始化的实例化方式。如下就是普通懒加载实现单例模式的代码示例：
 
 ``` IOS
+
 //
 //  Singleton.m
 //  testSingleton
@@ -114,6 +115,7 @@ static Singleton* _instance = nil;
 要实现线程安全的懒加载，可以使用@synchronized，示例代码如下：
 
 ``` JAVA
+
 //
 //  Singleton.m
 //  testSingleton
@@ -138,6 +140,7 @@ static Singleton* _instance = nil;
     return _instance;
 }
 @end
+
 ```
 
 这样加入同步关键字后，也就实现了线程安全访问，因为在任何时候它只能有一个线程访问 shareInstance。但是中同样存在另一个问题：假如我们这个单例对象在程序中使用比较频繁，那么每次使用的时候都需要进行线程同步，而实际上我们仅仅是希望在第一次初始化的时候使用同步而已，所以这个方法还需要进一步优化。
@@ -147,6 +150,7 @@ static Singleton* _instance = nil;
 由于上面提到的原因，这里我们引入双重检测懒加载式单例实现方法，示例代码如下：
 
 ``` JS
+
 //
 //  Singleton.m
 //  testCopy
@@ -172,6 +176,7 @@ static Singleton* _instance = nil;
     return _instance;
 }
 @end
+
 ```
 这种方法实现的单例已经近乎完美，但是不得不说的是，它也依然存在问题。具体的问题以及解决办法，下面我们讲完非懒加载式后统一说明。
 
@@ -181,6 +186,7 @@ static Singleton* _instance = nil;
 最简单的非懒加载式单例的实现示例代码如下：
 
 ``` Objective-C
+
 //
 //  Singleton.m
 //  testCopy
@@ -200,7 +206,9 @@ static Singleton* _instance = nil;
 +(Singleton*)shareInstance{
     return _instance;
 }
+
 @end
+
 ```
 
 与懒加载方式相比，这种方式本身就是线程安全的，不需要加锁，执行效率也相对较高。但是也有一些缺点，在类加载时就初始化，会浪费内存，而且在load中的代码初始化，会导致程序启动变缓。
@@ -210,6 +218,7 @@ static Singleton* _instance = nil;
 静态块式是我们平时开发中比较常用的一种方式，示例代码如下：
 
 ``` Objective-C
+
 //
 //  Singleton.m
 //  testCopy
@@ -232,6 +241,7 @@ static Singleton* _instance = nil;
     return instance;
 }
 @end
+
 ```
 
 这里使用了GCD的dispatch_once函数，作用正如其名：对于某个任务执行一次，且只执行一次。 dispatch_once函数有两个参数，第一个参数predicate用来保证执行一次，第二个参数是要执行一次的任务block。其在多线程程序中的低负载、高可依赖性、接口简单等特征，正好能很好的解决前面我们讨论过的懒加载方式单例实现的各种弊端。
@@ -245,6 +255,7 @@ static Singleton* _instance = nil;
 所以比较完整的单实例代码实际应该入下面实例一样，
 
 ``` Objective-C
+
 //
 //  Singleton.m
 //  testCopy
@@ -296,6 +307,7 @@ static Singleton* _instance = nil;
 当然，如果使用的MRC的话，最好再添加如下的代码，才更完整些。
 
 ``` Objective-C
+
 //  因为只有一个实例， 一直不释放，所以不增加引用计数。无意义。
 - (instancetype)retain
 {
@@ -316,6 +328,7 @@ static Singleton* _instance = nil;
 {
     return NSUIntegerMax; // 返回整形最大值。
 }
+
 
 ```
 
