@@ -68,56 +68,60 @@ terminate called throwing an exception
 
 列表中的每一条都是一个应用中或者某一个IOS frameworks的函数或方法。堆栈信息能显示出应用中当前还处于活动状态的方法和函数。调试器暂停了应用中断了这些函数和方法的执行。
 
-最后一条函数**start()**是入口。Somewhere in its execution it called the function above it, main()。是应用的入口点，经常显示在靠近底部的位置。**main()** 调用了 **UIApplicationMain()**，就是编辑窗口中绿色箭头指向的代码行。
+最后一条函数**start()**是入口。这个函数执行的过程中调用了它上面的函数, **main()**。是应用的入口点，经常显示在靠近底部的位置。**main()** 调用了 **UIApplicationMain()**，就是编辑窗口中绿色箭头指向的代码行。
 
-Going further up the stack, UIApplicationMain() called the _run method on the UIApplication object, which called CFRunLoopRunInMode(), which called CFRunLoopRunSpecific(), and so on, all the way up to __pthread_kill.
+查看更深入的堆栈信息，**UIApplicationMain()** 调用了 **UIApplication** 对象的 **_run** 方法。**_run**调用了**CFRunLoopRunInMode()**，**CFRunLoopRunInMode()**又调用了**CFRunLoopRunSpecific()**，这样层层调用直到 **__pthread****_kill**。
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Call-stack-principle.png  "调用堆栈信息")
 
-All of these functions and methods in the call stack, except for main(), are grayed out. That’s because they come from the built-in iOS frameworks. There is no source code available for them.
-The only thing in this stacktrace that you have source code for is main.m, so that’s what the Xcode source editor shows, even though it’s not really the true source of the crash. This often confuses new developers, but in a minute I will show you how to make sense of it.
-For fun, click on any one of the other items from the stacktrace and you’ll see a bunch of assembly code which might not make much sense to you:
+除了**main()**，调用堆栈中所有的函数和方法全部是灰化显示。这是因为这些信息都来自编译好的iOS库，没有有效的源代码导致。
+
+堆栈中的源代码文件只有**main.m**，所以尽管**main.m**并不是真正引入crash的文件，但是Xcode文件编辑器提示崩溃的点还是在这个源文件里。这个经常弄迷糊新手，所以本文中将快速给出一个方便大家理解的途径。
+
+点击堆栈信息中其他的任何一条信息，都能看到一堆毫无头绪的汇编代码：
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Assembly-code.png  "调用堆栈信息")
 
-Oh, if only we had the source code for that! :-）
+哦，如果有源代码就好了！ :-）
 
 ## [](#二、异常断点)二、异常断点
 
-So how do you find the line in the code that made the app crash? Well, whenever you get a stacktrace like this, an exception was thrown by the app. (You can tell because one of the functions in the call stack is named objc_exception_rethrow.)
-An exception happens when the program is caught doing something it shouldn’t have done. What you’re looking at now is the aftermath of this exception: the app did something wrong, the exception has been thrown, and Xcode shows you the results. Ideally, you’d want to see exactly where that exception gets thrown.
-Fortunately, you can tell Xcode to pause the program at just that moment, using an Exception Breakpoint. A breakpoint is a debugging tool that pauses your program at a specific moment. You’ll see more of them in the second part of this tutorial, but for now you’ll use a specific breakpoint that will pause the program just before an exception gets thrown.
-To set the Exception Breakpoint, we have to switch to the Breakpoint Navigator:
+因此到底该如何找到crash的代码行呢？不论何时出现了上面的堆栈信息的时候，都是app抛出了异常。（也可以说是堆栈上调用到了**objc_exception_rethrow**函数）应用做了不该做的事情就会抛出异常。目前关注的是这个异常导致的结果：app做了些不应该做的事情，抛出了异常，Xcode将其呈现出来。我们想确切知道到底是哪里抛的异常。
+
+幸运的是，Xcode还可以打全局断点暂停程序。断点可以帮助开发人员在某个场景暂停程序执行，本文的第二部分将会详细阐述这块。这里需要使用的是一种特殊的断点——全局断点，程序crash前进入全局断点。
+
+可以进入断点导航页设置全局断点：
 
 ![断点导航](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Breakpoint-navigator.png  "断点导航")
 
-At the bottom is a small + button. Click this and select Add Exception Breakpoint:
+点击底部的小**+** 按钮,选择**Add Exception Breakpoint**：
 
 ![添加断点](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Add-exception-breakpoint.png  "添加断点")
 
-A new breakpoint will be added to the list:
+新的全局断点就添加好了:
 
 ![添加好的断点](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Exception-breakpoint-added.png  "添加好的断点")
 
-Click the Done button to dismiss the pop-up. Notice that the Breakpoints button in Xcode’s toolbar is now enabled. If you want to run the app without any breakpoints enabled, you can simply toggle this button to off. But for now, leave it on and run the app again.
+点击确定按钮退出弹框提醒。此时Xcode的工具栏的断点按钮现在变成可用状态。如果你想程序跑起来不进任何断点的话，可以点击这个断点按钮关闭断点，但是现在，打开断点并运行app。
 
 ![崩溃中的高亮代码](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Crash-with-source-line-highlighted.png  "崩溃中的高亮代码")
 
-That’s better! The source code editor now points to a line from the source code – no more nasty assembly stuff – and notice that the call stack on the left (you might need to switch to the call stack via the Debug Navigator depending on how you have Xcode set up) also looks different.
-Apparently, the culprit is this line in the AppDelegate’s application:didFinishLaunchingWithOptions: method:
+好了，代码编辑器现在不再是不再是汇编代码，而是指向了源代码，同时注意看左侧的堆栈信息（是否切换出来堆栈信息，由Xcode的设置决定）也发生了变化。
+
+明显，问题指向**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法中下面这行代码：
 
 ```viewController.list = [NSArray arrayWithObjects:@"One", @"Two"];```
 
-Take a look at that error message again:
+再来看看错误信息:
 
 ```[UINavigationController setList:]: unrecognized selector sent to instance 0x6d4ed20```
 
-In the code, “viewController.list = something” calls setList: behind the scenes, because “list” is a property on the MainViewController class. However, according to the error message the viewController variable does not point to a MainViewController object but to a UINavigationController – and of course, UINavigationController does not have a “list” property! So things are getting mixed up here.
-Open the Storyboard file to see what the window’s rootViewController property actually points to:
+代码中的“viewController.list = something”调用了**setList:**，因为“list”是MainViewController类的一个属性。尽管在错误处看viewController并不是指向MainViewController对象的实例而是指向了UINavigationController，当然UINavigationController根本没有一个“list”属性。又混乱了！
+打开Storyboard查看窗口的rootViewController属性实际是这样：
 
 ![Storyboard-with-navigation-controller](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Storyboard-with-navigation-controller.png  "Storyboard-with-navigation-controller")
 
-Ah ha! The storyboard’s initial view controller is a Navigation Controller. That explains why window.rootViewController is a UINavigationController object instead of the MainViewController that you’d expect. To fix this, replace application:didFinishLaunchingWithOptions: with the following:
+啊哈！storyboard的初始控制视图是Navigation Controller。这样就能解释为什么为什么window.rootViewController指向UINavigationController对象而不是预计的MainViewController对象。 用下面的代码替换**application:didFinishLaunchingWithOptions:**来处理：
 
 ```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
