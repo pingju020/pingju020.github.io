@@ -4,7 +4,7 @@ layout: default
 
 # [](#我的app crash了，怎么办？——1)我的appcrash了，怎么办？——1
 
-> 这篇文章的作者是iOS Tutorial Team 的成员[Matthijs Hollemans](https://www.raywenderlich.com/about#matthijshollemans),他是一个经验丰富的ios设计开发工作者，他的联系方式：[Google+]() 和 [Twitter]()
+> 这篇文章的作者是iOS Tutorial Team 的成员[Matthijs Hollemans](https://www.raywenderlich.com/about#matthijshollemans),他是一个经验丰富的ios设计开发工作者，他的联系方式：[Google+]() 和 [Twitter](),[原文链接](https://www.raywenderlich.com/10209/my-app-crashed-now-what-part-1)
 
 我们大多数开发人员经常遇到这样的情况：我们的应用运行的好好的，突然——“砰”一下子crash了，抓狂！
 别慌！
@@ -382,7 +382,7 @@ So what about that empty table? I’m going to hold you in suspense for now. You
 When all is said and done, I promise that the app will run as its supposed to! More importantly, you’ll have accrued skills for when you run into these frustrations in your own apps – as you inevitably will.
 Any questions or comments so far? Let me know in the forums!
 
-![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/hollemans_100x100.png  "调用堆栈信息")This is a post by iOS Tutorial Team member Matthijs Hollemans, an experienced iOS developer and designer. You can find him on Google+ and Twitter.
+![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/hollemans_100x100.jpg  "调用堆栈信息")This is a post by iOS Tutorial Team member Matthijs Hollemans, an experienced iOS developer and designer. You can find him on Google+ and Twitter.
 
 
 
