@@ -35,4 +35,14 @@ layout: default
 [阅读原文](IOS中的单例)
 
 * * * 
+
+# [IOS崩溃处理之一(翻译[My App Crashed, Now What? – Part 1](https://www.raywenderlich.com/10209/my-app-crashed-now-what-part-1))](my-app-crashed-now-what-part-1)
+
+我们大多数开发人员经常遇到这样的情况：我们的应用运行的好好的，突然——“砰”一下子crash了，抓狂！ 别慌！ 假如此时很郁闷的你立即开始尝试修改代码，并期望如同寻找到了合适的咒语一样使得bug神奇消失，那么很可能导致更糟糕的问题。但是如果掌握了系统的定位crash问题的方法的话，解决crash问题也不是很复杂的事情。
+...
+
+[阅读原文](my-app-crashed-now-what-part-1)
+
+* * * 
+
 ~敬请继续期待~
