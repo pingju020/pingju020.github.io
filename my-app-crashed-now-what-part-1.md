@@ -2,12 +2,15 @@
 layout: default
 ---
 
-# [](#我的app crash了，怎么办？——1)我的appcrash了，怎么办？——1
+# [](#我的app崩溃了，怎么办？——1)我的appcrash了，怎么办？——1
 
-> 这篇文章的作者是iOS Tutorial Team 的成员[Matthijs Hollemans](https://www.raywenderlich.com/about#matthijshollemans),他是一个经验丰富的ios设计开发工作者，他的联系方式：[Google+]() 和 [Twitter](),[原文链接](https://www.raywenderlich.com/10209/my-app-crashed-now-what-part-1)
+> 这篇文章的作者是iOS Tutorial Team 的成员[Matthijs Hollemans](https://www.raywenderlich.com/about#matthijshollemans),他是一个经验丰富的ios设计开发工作者，他的联系方式：[Google+](https://plus.google.com/111394725745201507398?rel=author) 和 [Twitter](https://twitter.com/mhollemans)
+
+>阅读原文：[原文链接](https://www.raywenderlich.com/10209/my-app-crashed-now-what-part-1)
 
 我们大多数开发人员经常遇到这样的情况：我们的应用运行的好好的，突然——“砰”一下子crash了，抓狂！
 别慌！
+
 假如此时很郁闷的你立即开始尝试修改代码，并期望如同寻找到了合适的咒语一样使得bug神奇消失，那么很可能导致更糟糕的问题。但是如果掌握了系统的定位crash问题的方法的话，解决crash问题也不是很复杂的事情。
 
 首要的事情，是找到代码中crash出现的确切位置：哪个文件的哪行代码。本文将全面的阐述如何利用Xcode的调试工具定位代码的奔溃位置。
@@ -117,6 +120,7 @@ terminate called throwing an exception
 ```[UINavigationController setList:]: unrecognized selector sent to instance 0x6d4ed20```
 
 代码中的“viewController.list = something”调用了**setList:**，因为“list”是MainViewController类的一个属性。尽管在错误处看viewController并不是指向MainViewController对象的实例而是指向了UINavigationController，当然UINavigationController根本没有一个“list”属性。又混乱了！
+
 打开Storyboard查看窗口的rootViewController属性实际是这样：
 
 ![Storyboard-with-navigation-controller](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Storyboard-with-navigation-controller.png  "Storyboard-with-navigation-controller")
@@ -133,42 +137,43 @@ terminate called throwing an exception
 }
 ```
 
-First you get a reference to the UINavigationController from self.window.rootViewController, and once you have that you can get the pointer to the MainViewController by asking the navigation controller for its topViewController. Now the viewController variable should point to the proper object.
+先通过self.window.rootViewController获取到UINavigationController的引用，接着将navigation controller的topViewController设置成MainViewController的指针。现在，viewController就指向正确的对象了。
 
->**Note:** Whenever you get a “unrecognized selector sent to instance XXX” error, check that the object is of the right type and that it actually has a method with that name. Often you’ll find that you’re calling a method on a different object than you thought, because a pointer variable may not contain the right value.
+>**注:** 一旦出现 “unrecognized selector sent to instance XXX” 错误, 首先检查对象的类型是不是正确以及被调用的方法究竟是否存在。经常遇到的情况是指针并没有指向正确的值导致实际调用的压根就是预期外的其他类型对象的方法。
 > ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Unrecognized-selector-parts.png  "调用堆栈信息")
-> Another common reason for this error is a misspelling of the method name. You’ll see an example of this in a bit.
+> 另外，方法名拼写错误也会导致出现该问题。稍后将会给出一个这样的示例程序。
 
 ## [](#三、你的第一个内存错误)三、你的第一个内存错误
 
-That should have fixed our first problem. Run the app again. Whoops, it crashes at the same line, only now with an EXC_BAD_ACCESS error. That means the app has a memory management problem.
+第一个问题修复了，再来运行应用看看。 喔，又在同一行Crash了, 只不过这次是 EXC_BAD_ACCESS 错误。看样子，该应用还有内存处理上的问题。
 
 ![EXC_BAD_ACCESS-on-array](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/EXC_BAD_ACCESS-on-array.png  "EXC_BAD_ACCESS-on-array")
 
-The source of a memory-related crash is often hard to pinpoint, because the evil may have been done much earlier in the program. If a malfunctioning piece of code corrupts a memory structure, the results of this may not show up until much later, and in a totally different place.
-In fact, the bug may never show up for you at all while testing, and only rear its ugly head on the devices of your customers. You don’t want that to happen!
-This particular crash, however, is easy to fix. If you look at the source code editor, Xcode has been warning you about this line all along. See the yellow triangle on the left next to the line numbers? That indicates a compiler warning. If you click on the yellow triangle, Xcode should pop up a “Fix-it” suggestion like this:
+定位内存相关的crash相对来说会比较困难，因为隐患可能出现在崩溃前已经运行很久的其他代码中。有问题的代码破坏了内存结构，并不会立即在程序中体现出来，而是到一段时间后，其他地方再访问这段内存有问题了，才会爆出crash出来。
+
+而且事实上，可能测试的时候这种bug根本就不会暴露出来，最终往往暴露在用户的手机上。谁也不想出现这种情况。然而这种类型的crash也是比较容易处理的。如果仔细查看代码编辑框就会发现，Xcode原来早就警告我们这些存在内存处理不妥当的代码行了。看见代码左侧行标上的黄色三角形了么？那就是一个编译警告。点击黄色的三角形，Xcode会自动弹出一个“Fix-it”的修复建议，如下图：
 
 ![Missing-sentinel](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Missing-sentinel.png  "Missing-sentinel")
 
-The code initializes an NSArray object by giving it a list of objects, and such lists are supposed to be terminated using nil, the sentinel referred to in the warning. But that wasn’t done and now NSArray gets confused. It tries to read objects that don’t exist, and the app crashes hard.
-This is a mistake you really shouldn’t make, especially since Xcode already warns you about it. Fix the code by adding nil to the list as follows (Or, you can simply select the “Fix-it” option from the menu):
+此处用一种对象的序列来初始化NSArray对象，这种序列需要以nil结尾，但是此处并没有以nil结尾，编译器不知道该何处是序列的结尾，所以就报了这个警告出来。运行时，因为没有明显的结尾标志，所以系统会在读完了所有的参数后，还尝试获取并不存在的对象，添加到序列中，所以就崩溃了。
+
+这种错误实在不应该犯，特别是Xcode已经给出警告后。修复这个bug可以像下面代码一样，给序列添加nil结尾项（或者，直接点击“Fix-it”）：
 
 ```viewController.list = [NSArray arrayWithObjects:@"One", @"Two", nil];```
 
-## [](#四、“This class is not key value coding-compliant”)四、“This class is not key value coding-compliant”
+## [](#四、“这个类不符合键值编码”)四、“这个类不符合键值编码”
 
-Run the app again to see what other fun bugs this project has in store for you. And what do you know? It crashes again on main.m. Since the Exception Breakpoint is still enabled and we do not see any app source code highlighted, this time the crash truly didn’t happen in any of the app source code. The call stack corroborates this: none of these methods belong to the app, except main():
+在运行代码，看还有哪些其他有趣的bug。但是你是怎么知道的？它又一次崩溃在了**main.m**中。尽管全局断点还有效我们却看不到任何高亮的代码提示，这次代码的crash实实在在没有发生在我们应用的源代码中。堆栈信息证实，除了**main()**，没有一个方法属于我们的应用：
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Button-crash.png  "调用堆栈信息")
 
-If you look through the method names from the top going down, there is some stuff going on with NSObject and Key-Value Coding. Below that is a call to [UIRuntimeOutletConnection connect]. I have no idea what that is, but it looks like it has something to do with connecting outlets. Below that are methods that talk about loading views from a nib. So that gives you some clues already.
-However, there is no convenient error message in Xcode’s Debug Pane. That’s because the exception hasn’t been thrown yet. The Exception Breakpoint has paused the program just before it tells you the reason for the exception. Sometimes you get a partial error message with the Exception Breakpoint enabled, and sometimes you don’t.
-To see the full error message, click the “Continue Program Execution” button in the debugger toolbar:
+自上而下查看方法名，可以发现有些事情发生跟**NSObject**和**键值编码(Key-Value Coding)**有关系。其下，是对**[UIRuntimeOutletConnection connect]**的调用。不知道该怎么办，但是看上去好像跟**绑定(connect outlets)**有关系.再往下调用的方法是从nib中加载view。这已经给出了线索。然而Xcode的调试窗还没有很方便定位的错误信息，因为系统尚未抛出异常。全局断点仅仅会在程序告诉你异常原因前中断程序。有时候你会获取到一个明确的错误信息，有时候并不能获取到。
+
+想看到完整的错误信息，点击调试窗口工具栏的**“Continue Program Execution”**按钮：
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Continue-program-execution-button.png  "调用堆栈信息")
 
-You may need to click it more than once, but then you’ll get the error message:
+有时候可能需要多点几下，才能看到打印出来的错误信息：
 
 ```
 Problems[14961:f803] *** Terminating app due to uncaught exception 'NSUnknownKeyException', 
@@ -181,21 +186,27 @@ key value coding-compliant for the key button.'
 0x12f3022 0x12f190a 0x12f0db4 0x12f0ccb 0x102a7 0x11a9b 0x2872 0x27e5)
 terminate called throwing an exception
 ```
-As before, you can ignore the numbers at the bottom. They represent the call stack, but you already have that in a more convenient – and readable! – format in the Debug Navigator on the left.
-The interesting bits are:
+
+和之前一样忽略下方的数字。它们表示的是调用栈信息，但是我们已经有关于它们的更方便和可读的信息了！就是左侧的调试导航页面。
+
+有趣的信息如下:
 
 * NSUnknownKeyException
 * MainViewController
 * “this class is not key value coding-compliant for the key button”
 
-The name of the exception, NSUnknownKeyException, is often a good indicator of what is wrong. It tells you there is an “unknown key” somewhere. That somewhere is apparently MainViewController, and the key is named “button.”
-As we’ve already established, all of this happens while loading the nib. The app uses a storyboard rather than nibs, but internally the storyboard is just a collection of nibs, so it must be a mistake in the storyboard.
-Check out the outlets on MainViewController:
+异常的名字**NSUnknownKeyException**通常能很好的指示出问题原因。比如此处，就告诉我们代码某处使用了系统不知道的**“键值（unknown key）”**。这里的某处很明显是**MainViewController**，而且键值名应该就是**“button”**。
+
+可以确定，问题就发生在加载nib的时候。虽然应用直接使用的是storyboard，但是更深入些storyboard实际就是所有nib的集合，所以问题应该就处在storyboard中。
+
+检查**MainViewController**中的所有**outlet**：
+
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Button-outlet-in-storyboard.png  "调用堆栈信息")
 
-In the Connections Inspector, you can see that the UIButton in the center of the view controller is connected to MainViewController’s “button” outlet. So the storyboard/nib refers to an outlet named “button,” but according to the error message it can’t find this outlet.
-Have a look at MainViewController.h:
+在链接监测区，可以看到试图控制器中心的UIButton被链接到**MainViewController**的**“button”**了。所以**storyboard/nib**有一个出口叫**“button”**，但是根据错误信息看的话，实际根本没有这个出口。
+
+看看**MainViewController.h**:
 
 ```
 @interface MainViewController : UIViewController
@@ -207,186 +218,205 @@ Have a look at MainViewController.h:
 
 @end
 ```
-The @property definition for the “button” outlet is there, so what’s the problem? If you’ve been paying attention to the compiler warnings, you may have figured it out already.
-If not, check out MainViewController.m/s @synthesize list. Do you see the problem now?
-The code doesn’t actually @synthesize the button property. It tells MainViewController that it has a property named “button,” without providing it with a backing instance variable and getter and setter methods (which is what @synthesize does).
-Add the following to MainViewController.m below the existing @synthesize line to fix this issue:
+
+此处@property 定义了名为 “button” 出口, 所以到底是怎么回事? 如果你注意到编译警告，或许就不难找到问题症结了。
+
+即使没有，检查下**MainViewController.m**文件中的**@synthesiz**列表。现在找到问题了么？
+
+代码并没有准确的**@synthesize**按钮属性。它告诉**MainViewController**有一个名字叫**“button”**的属性，但是却并没有提供实例变量以及存取方法(这些都是由**@synthesize**完成的)
+
+在**MainViewController.m**中的**@synthesize**之下添加如下代码来处理这个问题：
 
 ```
 @synthesize button = _button;
 ```
-Now the app should no longer crash when you run it!
+现在运行程序将不再crash了！
 
->**Note: **The error “this class is not key value coding-compliant for the key XXX” usually occurs when loading a nib that refers to a property that doesn’t actually exist. This usually happens when you remove an outlet property from your code but not from the connections in the nib.
+>**注:** “this class is not key value coding-compliant for the key XXX” 错误经常出现在加载声明但是并未实现的属性的nib时。一般当从源文件中删除了一个outlet属性，但是并没有从nib去掉队形链接时，就会出现这中错误。
 
-## ()[#Push the Button]Push the Button
+## [](#五、点击按钮)五、点击按钮
 
-Now that the app works – or at least starts up without problems –, it’s time to tap that button.
+现在应用可以运行了，或者说至少启动没问题了，来，点击按钮试试。
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/App-with-button.png  "调用堆栈信息")
 
-Woah! The app crashes with a SIGABRT on main.m. The error message in the Debug Pane is:
+哇哦，应用崩溃在**main.m**中，还报了个**SIGABRT**错误信息。调试窗口的错误信息如下：
 
 ```
 Problems[6579:f803] -[MainViewController buttonTapped]: unrecognized selector sent
 to instance 0x6e44850
 ```
-The stack trace isn’t too illuminating. It lists a whole bunch of methods that are related one way or the other to sending events and performing actions, but you already know that actions were involved. After all, you tapped a UIButton and that results in an IBAction method being called.
-Of course, you’ve seen this error message before. A method is being called that does not exist. This time the target object, MainViewController, looks to be the right one since action methods usually live in the view controller that contains the buttons. And if you look in MainViewController.h, the IBAction method is there indeed:
+
+堆栈信息并不很明了，它列出了所有的可能通过这样那样途径发消息或执行操作的方法，但是已经可以知道哪个操作有问题。毕竟这里是点击了UIButton，调用IBAction method时出的问题。
+
+当然，之前已经遇到过类似问题了。因为调用了一个并没有实现的方法导致。不过这次目标对象**MainViewController**似乎没有问题，因为活动方法就是在这个有按钮的view controller中。而且头文件**MainViewController.h**中也确实存在IBAction方法：
 
 ```
 - (IBAction)buttonTapped:(id)sender;
 ```
 
-Or is it? The error message says the method name is buttonTapped, but MainViewController has a method named buttonTapped:, with a colon at the end because this method accepts one parameter (named “sender”). The method name from the error message, on the other hand, does not include a colon and therefore takes no parameters. The signature for that method looks like this instead:
+或者是不是这样？错误信息是想告诉我们方法名是**buttonTapped**，但是**MainViewController**的方法名却是以冒号结尾的**buttonTapped:**，因为它允许传入一个参数(名字叫**“sender”**)。反过来说，错误信息中的方法名并不包含冒号，因为不需要传入参数。所以正确格式的方法应该是这样：
 
 ```
 - (IBAction)buttonTapped;
 ```
-What happened here? The method initially did not have a parameter (something that is allowed for action methods), at which time the connection in the storyboard was made to the button’s Touch Up Inside event. However, some time after that, the method signature was changed to include the “sender” parameter, but the storyboard was not updated.
-You can see this in the storyboard, on the Connections Inspector for the button:
+
+这里到底是怎么回事呢？方法初始化的时候是没有参数的格式（有些情况允许没有参数的响应方法），同时，storyboard将该方法关联成了按钮的点击（Touch Up Inside）事件响应。但是，后来方法变成了包含一个“sender”参数的格式，但是storyboard的关联没有实时更新。
+
+我们可以在storyboard的按钮链接窗口看到如下场景：
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Button-connections.png  "调用堆栈信息")
 
-First disconnect the Touch Up Inside event (click the small X), then connect it to the Main View Controller again, but this time select the buttonTapped: method. Notice that in the Connections Inspector there is now a colon after the method name.
-Run the app and tap the button again. What the?! Again you get the “unrecognized selector” message, although this time it correctly identifies the method as buttonTapped:, with the colon.
+先断开点击(Touch Up Inside)的链接（点击小的X按钮），接着将其再一次链接到主视图控制器，不过这次选择**buttonTapped:**方法。注意，这时链接窗口中的方法名末尾是包含了冒号的。
+
+再运行程序后点击按钮。什么鬼？尽管现在已经使用了有冒号的正确格式的点击方法**buttonTapped:**，还是报**“unrecognized selector”**错误信息，
 
 ```
 Problems[6675:f803] -[MainViewController buttonTapped:]: unrecognized selector sent
 to instance 0x6b6c7f0
 ```
-If you look closely, the compiler warnings should point you to the solution again. Xcode complains that the implementation of MainViewController is incomplete. Specifically, the method definition for buttonTapped: is not found.
+
+如果仔细查看的话，就会发现编译警告又是跟上面类似的场景。Xcode在抱怨**MainViewController**实现文件不完整。特别是**buttonTapped:**没有实现。
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Incomplete-implementation-warning.png  "调用堆栈信息")
 
-Time to look at MainViewController.m. There certainly appears to be a buttonTapped: method in there, although… wait a minute, it’s spelled wrong:
+该看看**MainViewController.m**文件了。这里面明明有**buttonTapped:**方法的，呃，等等，拼写好像不对：
 
 ```
 - (void)butonTapped:(id)sender
 ```
-Easy enough to fix. Rename the method to:
+
+好了这个很好修复，修改下名字:
+
 
 ```
 - (void)buttonTapped:(id)sender
 ```
-Note that you don’t necessarily need to declare it as IBAction, although you can do so if you think that is neater.
 
->**Note: **This sort of thing is easy to catch if you’re paying attention to the compiler warnings. Personally, I treat all warnings as fatal errors (there is even an option for this in the Build Settings screen in Xcode) and I’ll fix each and every one of them before running the app. Xcode is pretty good at pointing out silly mistakes such as these, and it’s wise to pay attention to these hints.
+请注意，尽管将方法定义成IBAction会使代码看上去整洁，但是也没有必要非将方法定义成IBAction。
 
-## [](#Messing with Memory)Messing with Memory
+>**注:**如果留神编译器的警告的话，这章节的问题都是比较容易定位的。就个人来说，我是将所有的警告都当做错误来处理 (在Xcode的编译设置页：Build Settings screen有一个设置项，将警告当做error) ，所以我会在程序运行前处理修复掉所有的警告信息。 Xcode能很好的指出如上的低级错误，留神这些警告信息能达到事半功倍的效果。
 
-You know the drill: run the app, tap the button, wait for the crash. Yep, there it is:
+## [](#六、内存信息)六、内存信息
+
+继续之前的操作：运行程序，点击按钮，等待崩溃。是呢，不负所望：
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/NSLog-crash.png  "调用堆栈信息")
 
-It’s another one of those EXC_BAD_ACCESS ones, yikes! Fortunately, Xcode shows you exactly where the crash happened, in the buttonTapped: method:
+好惊讶，这次是EXC_BAD_ACCESS错误中的另一种。幸运的是，Xcode告诉我们崩溃发生的位置在**buttonTapped:**方法中这一行：
 
 ```
 NSLog("You tapped on: %s", sender);
 ```
 
-Sometimes these mistakes may take a moment or two to register in your mind, but again Xcode lends a helping hand – just tap the yellow triangle to see what’s wrong:
+有时候，这种问题会让我们反应不过来发生了什么，同样不用担心，Xcode提供了帮手，点击黄色的三角形看看有什么错误：
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Insert-@.png  "调用堆栈信息")
 
-NSLog() takes an Objective-C-type string, not a plain old C-string, so inserting an @ will fix it:
+NSLog()使用的是**Objective-C**类型的**字符串**，并不是**C**类型的**字符串**，所以插入一个**@**来修复：
 
 ```
 NSLog(@"You tapped on: %s", sender);
 ```
 
-You’ll notice that the warning yellow triangle doesn’t go away. This is because this line has another bug that may or may not crash your app. Those are the fun ones. Sometimes the code works just fine – or at least appears to work just fine – and at other times it will crash. (Of course, these sorts of crashes only happen on customers’ devices, never on your own.)
+仔细看发现黄色警告信息并没有消除。因为这行还有其他不知道会不会导致崩溃的问题存在。这同样很有趣，有时候代码运行的好好的，或者说看上去执行的好好的，但是其他不知道什么时候它就崩溃了(当然此类型的崩溃经常发生在客户手机上)。
 
-Let’s see what the new warning is:
+让我们来看看具体的警告信息:
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Format-string-issue.png  "调用堆栈信息")
 
-The %s specifier is for C-style strings. A C-string is just a section of memory – a plain old array of bytes – that is terminated by a so-called “NUL character,” which is really just the value 0. For example, the C-string “Crash!” looks like this in memory:
+**%s**表示的是**C**类型的字符串。**C**类型的字符串实际只是一串连续的以**空字符(NULL character，实际值是0)**结尾的**byte**类型数组。比如，**C**类型的字符串“Crash!”实际在内存中的存储如下：
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/C-string.png  "调用堆栈信息")
 
-Whenever you use a function or method that expects a C-style string, you have to make sure the string ends with the value 0, or the function will not recognize that the string has ended.
-Now, when you specify %s in an NSLog() format string – or in NSString’s stringWithFormat – then the parameter is interpreted as if it were a C-string. In this case, “sender” is the parameter, and it’s a pointer to a UIButton object, which is definitely not a C-string. If whatever “sender” points to contains a 0 byte, then the NSLog() will not crash, but output something such as:
+如果你的方法或函数中用到了**C**类型的字符串，那必须先确认字符串是以**0**结尾的，否则函数处理时没办法识别出字符串的结尾。
+
+现在，当你在**NSLog()**格式的字符串或者**NSString**的**stringWithFormat**的字符串中使用**%s**，参数就会被当做**C**类型的字符串解析。这种情况下，作为参数传入的**“sender”**实际是一个**UIButton**的对象，并不是个**C**类型的字符串。甚至当**“sender”**指向的内存中包含字节0，**NSLog()**将不会崩溃，而是输出类似如下的信息：
 
 ```
 You tapped on: xËj
 ```
 
-You can actually see where this comes from. Run the app again, tap the button and wait for the crash. Now, in the left half of the Debug Pane, right-click on “sender” and pick the “View Memory of *sender” option (make sure to choose the one with the asterisk in front of sender).
+可以准确的看到这些信息来自何处。再一次运行程序，点击按钮等待崩溃。在左侧的调试区，右击**“sender”**选择**“View Memory of \*sender”**项（确认点击的是带*号的）。
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/View-memory-menu.png  "调用堆栈信息")
 
-Xcode will now show you the memory contents at that address, and it’s exactly what NSLog() printed out.
+Xcode这时会这块内存地址存储的内容，也就是刚刚**NSLog()**输出的信息。
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Memory-contents.png  "调用堆栈信息")
 
-However, there is no guarantee there is a NUL byte, and you could just as easily run into a EXC_BAD_ACCESS error. If you’re always testing your app on the simulator that may not happen for a long time, as the circumstances may always be in your favor in your particular testing environment. That makes these kinds of bugs very hard to trace.
-Of course, in this case Xcode has already warned you about the wrong format specifier, so this particular bug was easy to find. But whenever you’re using C-strings or manipulating memory directly, you have to be very careful not to mess around with someone else’s memory.
-If you’re lucky the app will always crash and the bug is easy to find, but more commonly, the app will only crash sometimes – making the problem hard to reproduce! – and then the hunt for the bug can take on epic proportions.
-Fix the NSLog() statement as follows:
+然而并不能保证这块内存中一定有NULL字节，所以EXC_BAD_ACCESS错误并不是能轻易报出的。如果一直在模拟器上运行程序，可能跑很长时间都出不来这个错误，因为你自己的测试环境总是你自己最喜欢的状态。这也导致此类型的bug很难浮现。
+
+当然，这种情况发生时Xcode已经给你了类型错误的警告了，所以这种特殊的bug也是很好查找的。但是不论何时，只要使用了**C**类型的字符串或者直接操作了内存，都要特别小心是不是影响了其他地方的内存，导致它们出了问题。
+
+如果应用总是奔溃，那么恭喜你这个bug定位起来实际很容易，但是比较常见的是，应用程序时而崩溃时而不崩溃，这将是问题复现非常困难！这种情况下定位这个bug也将变成史诗级的难题。
+
+修复此处**NSLog()**语句的问题，用下面的方法：
 
 ```
 NSLog(@"You tapped on: %@", sender);
 ```
 
-Run the app and press the button once more. The NSLog() does what it’s supposed to, but looks as if you’re not done crashing in buttonTapped: yet.
+运行程序再一次点击按钮。**NSLog()**做了我们期望它做的事情，但是似乎我们还没有处理好**buttonTapped:**的崩溃。
 
-## [](#Making Friends With the Debugger)Making Friends With the Debugger
+## [](#七、和调试器做朋友)七、和调试器做朋友
 
-For this latest crash, Xcode points at the line:
+Xcode告诉我们这个最新的crash在这一行：
 
 ```[self performSegueWithIdentifier:@"ModalSegue" sender:sender];```
 
-There is no message in the Debug Pane. You can press the Continue Program Execution button like you did before, but you can also type a command in the debugger to get the error message. The advantage of doing this is that the app can stay paused in the same place.
-If you’re running this from the simulator, you can type the following after the (lldb) prompt:
+调试窗口没有信息输出。你可以像之前一样一直点击继续运行按钮，或者你也可以在调试器中输入一个命令去获取错误信息。这样做的好处是，程序还是中断在之前的位置。
+如果是在模拟器上运行，可以输入如下的**(lldb)**命令：
 
 ```(lldb) po $eax```
 
-LLDB is the default debugger for Xcode 4.3 and up. If you’re using an older version of Xcode, then you have the GDB debugger. They share some basic commands, so if your Xcode prompt says (gdb) instead of (lldb), you should still be able to follow along without a problem. (By the way, you can switch between debuggers in the Scheme editor in Xcode, under the Run action. And you can access the Scheme editor by Alt-tapping the Run icon at the top left corner of your Xcode window.)
-The po command stands for “print object.” The symbol $eax refers to one of the CPU registers. In the case of an exception, this register will contain a pointer to the NSException object. Note: $eax only works for the simulator, if you’re debugging on the device you’ll need to use register $r0.
-For example, if you type:
+**LLDB**是Xcode4.3及以上版本中默认调试器。如果使用的是早期的Xcode版本，可以使用**GDB**调试器。他们俩的基本命令一致，所以即便你的Xcode编译命令前面的标记是**(gdb)**而不是上面的**(lldb)**，也一样可以继续（顺便补充一下，you can switch between debuggers in the Scheme editor in Xcode, under the Run action. And you can access the Scheme editor by Alt-tapping the Run icon at the top left corner of your Xcode window.）。**po**命令代表**打印对象（print object）**。参数**$eax**指向一个CPU寄存器。出现异常的情况下，这个寄存器中的数据将包含一个指向**NSException**对象的指针。注意：**$eax**仅在模拟器环境下有效，如果你使用真机调试，那么要访问的寄存器是**$r0**。
+
+例如，这样输入：
 
 ```(lldb) po [$eax class]```
 
-You will see something like this:
+将看到这样的信息:
 
 ```(id) $2 = 0x01446e84 NSException```
 
-The numbers aren’t important, but it’s obvious you’re dealing with an NSException object here.
-You can call any method from NSException on this object. For example:
+数字并不重要，但是明显你正在处理的**NSException**对象是存储在这里的。
+
+你可以通过这个对象调用任何**NSException**的方法。比如：
 
 ```(lldb) po [$eax name]```
 
-This will give you the name of the exception, in this case NSInvalidArgumentException, and:
+这行命令将输出该异常的名称，比如这里是**NSInvalidArgumentException**，另外输出如下命令：
 
 ```(lldb) po [$eax reason]```
 
-This will give you the error message:
+将告诉我们异常的原因:
 
 ```
 (unsigned int) $4 = 114784400 Receiver (<MainViewController: 0x6b60620>) has no
 segue with identifier 'ModalSegue'
 ```
 
+>**注**: 调用**“po $eax”**的时候, 通常也会调用到对象的**“description”**方法并且输出, 这种情况下一般就已经给出了错误消息。
 
->Note: When you just do “po $eax”, it will call the “description” method on the object and print that, which in this case also gives you the error message.
+正好就解释了刚刚发生了什么：你的本意是执行一个名叫**“ModalSegue”**的**segue**，但是显然**MainViewController**中不存在这个东东。
 
-
-So that explains what’s going on: you’re attempting to perform a segue named “ModalSegue” but apparently there is no such segue on the MainViewController.
-
-The storyboard does show that a segue is present, but you’ve forgotten to set its identifier, a typical mistake:
+**storyboard**显示一个**segue**使用的是模态方式，但是你忘记设置它的标识，这是个典型的错误：
 
 ![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/Segue-identifier.png  "调用堆栈信息")
 
-Change the segue identifier to “ModalSegue.” Run the app again, and – wait for it – tap the button. Whew, no more crashes this time! But here’s a teaser for our next part – the table view that shows up isn’t supposed to be empty!
+修改**segue**的标识为**“ModalSegue”**。再一次运行程序，点击按钮，等待crash。这次不再崩溃了！但是呢，这里遗留了我们下一篇要讨论的问题：显示的tableview不应该为空！
 
-## []()Where to Go From Here?
+## [](#八、相关篇章)八、相关篇章
 
-So what about that empty table? I’m going to hold you in suspense for now. You’ll tackle it in Part Two of this tutorial, along with some more fun bugs you’re likely to come across in your coding life. Also in Part Two, you’ll add some more tools to your debugging arsenal, including the NSLog() statement, breakpoints and Zombie Objects.
-When all is said and done, I promise that the app will run as its supposed to! More importantly, you’ll have accrued skills for when you run into these frustrations in your own apps – as you inevitably will.
-Any questions or comments so far? Let me know in the forums!
+所以这个空白的tableview到底是关于什么的? 这是本文的一个悬念，下一篇中会详细解释，同时也会解决一些很有趣的在你编程生涯中曾经遇到过bug。当然通过第二部分学习，你还可以更加充实自己的调试技能，比如**NSLog()**语句，**断点**以及**僵尸对象（Zombie Objects）**。
 
-![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/hollemans_100x100.jpg  "调用堆栈信息")This is a post by iOS Tutorial Team member Matthijs Hollemans, an experienced iOS developer and designer. You can find him on Google+ and Twitter.
+当所有的这些做完讲完，我承诺程序一定会按照我们期待的那样运行！最重要的是，你已经掌握了技能当你的程序出现这些令人挫败的问题时，你也必将能妥善处理它们。
+
+有任何意见和建议请至论坛找我！
+
+
+![调用堆栈信息](https://pingju020.github.io/assets/images/my-app-crashed-now-what-part-1/hollemans_100x100.jpg  "调用堆栈信息")这篇文章的作者是iOS Tutorial Team 的成员[Matthijs Hollemans](https://www.raywenderlich.com/about#matthijshollemans),他是一个经验丰富的ios设计开发工作者，他的联系方式：[Google+](https://plus.google.com/111394725745201507398?rel=author) 和 [Twitter](https://twitter.com/mhollemans)
 
 
 
