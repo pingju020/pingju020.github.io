@@ -87,12 +87,57 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
  
  ``pod lib lint --allow-warnings``
  
-  命令回车后输出ExampleKit passed validation.说明私有库已经配置好了。如果有错误提示，也可以针对提示的错误信息做适当修改即可。
-  至此，私有库的搭建及配置完成。
+  回车后输出ExampleKit passed validation.说明私有库已经配置好了。至此私有库的创建和配置完成。
+  
+7. 错误排查。
+  
+  如果有报错信息可针对具体的提示进行修改，如我上面给出配置实际会有如下错误信息：
+  
+   ![pod lib lint报错](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error@2x.png  "pod lib lint报错")
+   
+  这时就按照错误提示在命令行中敲如下命令执行：
+  
+  ``pod lib lint --allow-warnings --verbose``
+  
+  此时会打印很多编译信息，我们截取部分来看。
+  
+  首先，刚开头的部分信息如报错信息图1所示：
+  
+  ![报错信息图1](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_1@2x.png  "报错信息图1")
+  
+  假设一开始我们并不知道这个意味着什么，所以先不理睬发生了什么，接着往下看。会发现有这么一段输出，这张图命名为报错信息图2：
+  
+  ![报错信息图2](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_1_end@2x.png  "报错信息图2")
+  
+  从这里基本已经可以看出是说找不到UIKit这个framework，但是为什么呢。如果此时还没想明白，可以接着往下看报错信息图3：
+  
+  ![报错信息图3](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_2@2x.png  "报错信息图3")
+  
+  以及报错信息图4：
+  
+  ![报错信息图4](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_2_end@2x.png  "报错信息图4")
+  
+  对照报错信息图1和报错信息图3会发现这两句绿色背景的信息不同：
+  
+  图1中 `` ExampleKit (0.0.1) - Analyzing on macOS platform.``
+  
+  图2中 `` ExampleKit (0.0.1) - Analyzing on iOS platform``
+  
+  所以对应的图3是失败，而图4是成功。那么很明白了，就是我们的ExampleKit在macOS上lint是失败的，在iOS上lint则是成功的。然而，我的初衷是做一个ios的lib，并没有适配macOS，怎么会lint到macOS呢？是不是platform信息设置的不对呢？
+  
+  此时再去排查上面的的配置信息，就很容易发现果然少了这句：
+  
+  ``s.platform     = :ios, "5.0"``
+  
+  添加后再执行 ``pod lib lint --allow-warnings``
+  
+  此时就通过了：
+  
+  ![lint通过](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint@2x.png  "lint通过")
   
 ### [](#2.2 本地测试私有库)2.2 本地测试私有库
 
-  将本地所有的改动提交到配置库后，终端cd命令进入edu_anhui_main工程所在目录vim Podfile并回车，点i进入编辑模式，敲入如下配置：保存输入信息退出vim。再在终端输入pod install回车即可成功加载edu_anhui_contactKi私有库。加载完成后打开edu_anhui_main.xcworkspace文件即可看到如下代码结构： 注：如果库本身还有依赖其他的私有库或者第三方库，除了要在库工程目录添加podfile文件外，更要在.podspec中添加s.dependency "引用的库名称"
+  将本地所有的改动提交到配置库后，终端cd命令进入MainTest工程所在目录vim Podfile并回车，点i进入编辑模式，敲入如下配置：保存输入信息退出vim。再在终端输入pod install回车即可成功加载edu_anhui_contactKi私有库。加载完成后打开edu_anhui_main.xcworkspace文件即可看到如下代码结构： 注：如果库本身还有依赖其他的私有库或者第三方库，除了要在库工程目录添加podfile文件外，更要在.podspec中添加s.dependency "引用的库名称"
 
 
 
