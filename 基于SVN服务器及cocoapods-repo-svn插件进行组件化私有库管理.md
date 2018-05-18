@@ -67,20 +67,20 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
    可以看到如下图所示的配置文件
    
    ![ExampleKit.podspec初始文件](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec_1@2x.png  "ExampleKit.podspec初始文件")
-   
    ![ExampleKit.podspec初始文件](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec_2@2x.png  "ExampleKit.podspec初始文件")
-   
    ![ExampleKit.podspec初始文件](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec_3@2x.png  "ExampleKit.podspec初始文件")
    
- 
-  其中#开头的行全部为注释行，我们重点要修改的配置项如下有以下几条：
-  
-  ![ExampleKit.podspec修改版](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec@2x.png  "ExampleKit.podspec修改版")  需要注意的是在创建ExampleKi工程的时候，不要包含自动化测试框架。
- 6. lint库。保存后在终端工具中输入如下命令：
- 
- ``pod lib lint --allow-warnings``
- 
-  回车后输出ExampleKit passed validation.说明私有库已经配置好了。至此私有库的创建和配置完成。
+   其中#开头的行全部为注释行，我们重点要修改的配置项如下有以下几条：
+   
+   ![ExampleKit.podspec修改版](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec@2x.png  "ExampleKit.podspec修改版")
+   
+   需要注意的是在创建ExampleKi工程的时候，不要包含自动化测试框架。
+   
+6. lint库。保存后在终端工具中输入如下命令：
+
+   ``pod lib lint --allow-warnings``
+   
+   回车后输出ExampleKit passed validation.说明私有库已经配置好了。至此私有库的创建和配置完成。
   
 7. 错误排查。
   
@@ -131,7 +131,8 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
 ### [](#2.2 本地测试私有库)2.2 本地测试私有库
 
   
-  将本地所有的改动提交到配置库后，终端cd命令进入MainTest工程所在目录vim Podfile并回车，点i进入编辑模式，敲入如下配置：保存输入信息退出vim。再在终端输入pod install回车即可成功加载edu_anhui_contactKi私有库。加载完成后打开edu_anhui_main.xcworkspace文件即可看到如下代码结构： 注：如果库本身还有依赖其他的私有库或者第三方库，除了要在库工程目录添加podfile文件外，更要在.podspec中添加s.dependency "引用的库名称"
+  将本地所有的改动提交到配置库后，终端cd命令进入MainTest工程所在目录
+  vim Podfile并回车，点i进入编辑模式，敲入如下配置：保存输入信息退出vim。再在终端输入pod install回车即可成功加载edu_anhui_contactKi私有库。加载完成后打开edu_anhui_main.xcworkspace文件即可看到如下代码结构： 注：如果库本身还有依赖其他的私有库或者第三方库，除了要在库工程目录添加podfile文件外，更要在.podspec中添加s.dependency "引用的库名称"
 
 
 
