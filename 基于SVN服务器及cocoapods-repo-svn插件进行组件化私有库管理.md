@@ -49,13 +49,13 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
 
 安装好cocoapods-repo-svn插件后，准备工作告一段落，可以开始制作私有库了。
 
-此处假设我需要在项目**modulization**下做一个**MyExampleKit**的私有库，它的主工程名为**MainTest**。 
-### [](#2.1 制作MyExampleKit私有库)2.1 制作MyExampleKit私有库以下是制作MyExampleKit这个库的步骤。
+此处假设我需要在项目**modulization**下做一个**MyExampleKit**的私有库，它的主工程名为**Example**。 
+### [](#2.1 创建MyExampleKit私有库)2.1 创建MyExampleKit私有库以下是制作MyExampleKit这个库的步骤。
 1. 在SVN根目录modulization下新建MyExampleKit私有库目录。
    在Cornerstone中的REPOSITORIES下找到modulization，展开文件夹，右击选择**New Folder in “modulization”**，给文件夹命名为MyExampleKit。
     
 2. svn check out根目录modulization到本地（使用cornerstone或者命令行svn co均可）。
-3. 在根目录下新建MainTest测试工程，并在MyExampleKit目录下新建ExampleKit工程。4. 创建podspec文件：
+3. 在根目录下新建Example测试工程，并在MyExampleKit目录下新建ExampleKit工程。4. 创建podspec文件：
    打开终端工具，cd进入到MyExampleKit目录下，输入如下命令，生成私有库的ExampleKit.podspec文件。
    
    ``pod spec create ExampleKit``
@@ -74,7 +74,7 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
    
    ![ExampleKit.podspec修改版](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec@2x.png  "ExampleKit.podspec修改版")
    
-   需要注意的是在创建ExampleKi工程的时候，不要包含自动化测试框架。
+   需要注意的是在创建ExampleKit工程的时候，不要包含自动化测试框架。
    
 6. lint库。保存后在终端工具中输入如下命令：
 
@@ -84,56 +84,124 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
   
 7. 错误排查。
   
-  如果有报错信息可针对具体的提示进行修改，如我上面给出配置实际会有如下错误信息：
-  
+   如果有报错信息可针对具体的提示进行修改，如我上面给出配置实际会有如下错误信息：
+   
    ![pod lib lint报错](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error@2x.png  "pod lib lint报错")
    
-  这时就按照错误提示在命令行中敲如下命令执行：
-  
-  ``pod lib lint --allow-warnings --verbose``
-  
-  此时会打印很多编译信息，我们截取部分来看。
-  
-  首先，刚开头的部分信息如报错信息图1所示：
-  
-  ![报错信息图1](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_1@2x.png  "报错信息图1")
-  
-  假设一开始我们并不知道这个意味着什么，所以先不理睬发生了什么，接着往下看。会发现有这么一段输出，这张图命名为报错信息图2：
-  
-  ![报错信息图2](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_1_end@2x.png  "报错信息图2")
-  
-  从这里基本已经可以看出是说找不到UIKit这个framework，但是为什么呢。如果此时还没想明白，可以接着往下看报错信息图3：
-  
-  ![报错信息图3](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_2@2x.png  "报错信息图3")
-  
-  以及报错信息图4：
-  
-  ![报错信息图4](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_2_end@2x.png  "报错信息图4")
-  
-  对照报错信息图1和报错信息图3会发现这两句绿色背景的信息不同：
-  
-  图1中 `` ExampleKit (0.0.1) - Analyzing on macOS platform.``
-  
-  图2中 `` ExampleKit (0.0.1) - Analyzing on iOS platform``
-  
-  所以对应的图3是失败，而图4是成功。那么很明白了，就是我们的ExampleKit在macOS上lint是失败的，在iOS上lint则是成功的。然而，我的初衷是做一个ios的lib，并没有适配macOS，怎么会lint到macOS呢？是不是platform信息设置的不对呢？
-  
-  此时再去排查上面的的配置信息，就很容易发现果然少了platform的配置。在s.license下面添加：
-  
-  ``s.platform     = :ios, "5.0"``
-  
-  添加后再执行 ``pod lib lint --allow-warnings``
-  
-  此时就通过了：
-  
-  ![lint通过](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint@2x.png  "lint通过")
-  
-### [](#2.2 本地测试私有库)2.2 本地测试私有库
+   这时就按照错误提示在命令行中敲如下命令执行：
+   
+   ``pod lib lint --allow-warnings --verbose``
+   
+   此时会打印很多编译信息，我们截取部分来看。
+   
+   首先，刚开头的部分信息如报错信息图1所示：
+   
+   ![报错信息图1](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_1@2x.png  "报错信息图1")
+   
+   假设一开始我们并不知道这个意味着什么，所以先不理睬发生了什么，接着往下看。会发现有这么一段输出，这张图命名为报错信息图2：
+   
+   ![报错信息图2](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_1_end@2x.png  "报错信息图2")
+   
+   从这里基本已经可以看出是说找不到UIKit这个framework，但是为什么呢。如果此时还没想明白，可以接着往下看报错信息图3：
+   
+   ![报错信息图3](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_2@2x.png  "报错信息图3")
+   
+   以及报错信息图4：
+   
+   ![报错信息图4](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint_error_2_end@2x.png  "报错信息图4")
+   
+   对照报错信息图1和报错信息图3会发现这两句绿色背景的信息不同：
+   
+   图1中 `` ExampleKit (0.0.1) - Analyzing on macOS platform.``
+   
+   图2中 `` ExampleKit (0.0.1) - Analyzing on iOS platform``
+   
+   所以对应的图3是失败，而图4是成功。那么很明白了，就是我们的ExampleKit在macOS上lint是失败的，在iOS上lint则是成功的。然而，我的初衷是做一个ios的lib，并没有适配macOS，怎么会lint到macOS呢？是不是platform信息设置的不对呢？
+   
+   此时再去排查上面的的配置信息，就很容易发现果然少了platform的配置。在s.license下面添加：
+   
+   ``s.platform     = :ios, "5.0"``
+   
+   添加后再执行 ``pod lib lint --allow-warnings``
+   
+   此时就通过了：
+   
+   ![lint通过](https://pingju020.github.io/assets/images/svn_pods_private/pod_lib_lint@2x.png  "lint通过")
+   
+   至此，一个空白的私有库框架已经完成。
+   
+   
+### [](#2.2 测试私有库)2.2 测试私有库
 
-  
-  将本地所有的改动提交到配置库后，终端cd命令进入MainTest工程所在目录
-  vim Podfile并回车，点i进入编辑模式，敲入如下配置：保存输入信息退出vim。再在终端输入pod install回车即可成功加载edu_anhui_contactKi私有库。加载完成后打开edu_anhui_main.xcworkspace文件即可看到如下代码结构： 注：如果库本身还有依赖其他的私有库或者第三方库，除了要在库工程目录添加podfile文件外，更要在.podspec中添加s.dependency "引用的库名称"
+私有库的测试分如下几步：
 
+1. **build工程**
+   
+   为了更准确的鉴定库代码的准确性，建议将库代码单独做成一个Framework，里面包含了所有我们需要pod成私有库的代码和资源。
+   
+   而测试工程则作为一个单独的app工程，以依赖上面的Framework的方式引入需要导入成私有库的代码和资源。
+   
+   如，我此处刚创建好的Example和ExampleKit的关系如下图所示：
+   
+   ![工程示意图](https://pingju020.github.io/assets/images/svn_pods_private/project@2x.png  "工程示意图")
+   
+   这样处理的一个最大的好处就是在将ExampleKit下所有代码和资源导出成私有库前，可以最大限度的将库代码和测试代码剥离，并且处理掉所有代码层面问题。
+   
+   如果这里编译通过，Example工程可以正常依赖使用ExampleKit.framework,那么就可以进行下一步的测试工作了。
+   
+2. **pod lib lint**
+   
+   前面已经提及过pod lib lint，也简单描述过一个lint错误的现象和解决过程。虽然当时我们说很多错误都可以通过``pod lib lint --allow-warnings --verbose``来查看错误信息并解决。
+   
+   但是，此处因为有代码资源等加进来，或者还涉及到代码路径的问题，经常会有其他问题出现。而这时候的问题多集中在文件资源路径设置不对，依赖的库配置不对等问题上。基本上都是修改podspec文件的设置而解决的。
+   
+   建议针对pod官方给出的解释，核查处理相关错误。
+  
+3. **pod install**
+
+   如果上面的lint通过了，那么恭喜，可以进行测试的最后一步了。
+   
+   先将ExampleKit的所有代码提交到svn。
+   
+   然后在本地新建个测试工程比如test，并关闭Xcode。
+   
+   打开终端工具，cd命令进入到test工程所在的目录。
+   
+   在终端执行命令：
+   
+   ``pod init``
+   
+   此时test所在的目录下，多了名为"Podfile"的文本文件。继续在终端执行命令：
+   
+   ``vim Podfile``
+   
+   打开Podfile文件后，按下i键，编辑如下内容：
+   
+   >  #podfile 文件配置
+   >
+   >workspace 'test.xcworkspace'
+   >
+   >project 'test.xcodeproj'
+   >
+   >   #use_frameworks!个别需要用到它，比如reactiveCocoa
+   >
+   >target 'test' do
+   >
+   >platform :ios, '7.0'
+   >
+   >project 'test.xcodeproj'
+   >
+   >pod 'ExampleKit’, :svn => 'http:XXXX/MyExampleKit’
+   >
+   >end
+   
+   编辑好后ESC退出编辑模式，再 按 “：wq” 保存编辑。
+   
+   此时再到终端执行``pod install``
+   
+   如果前两步都没什么错误的话，此时应该可以顺利install完成。完成后，Finder进入test目录，双击打开test.xcworkspace，到pod工程下查看导入的ExampleKit私有库。如果需要使用的文件都在，那么便可照pod公共库的方法引用这个私有库的文件。
+   
+   **注：此处容易出现私有库中缺少文件的情况，一般是该私有库的podspec中配置的文件存放路径不对或者没有导出导致，再仔细核查s.source_files的设置或者s.resources的设置即可。**
 
 
 ### [](#2.1 将远程私有库关联到本地)2.1 将远程私有库关联到本地
