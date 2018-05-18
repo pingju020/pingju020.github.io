@@ -66,55 +66,16 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
    
    可以看到如下图所示的配置文件
    
-   ![ExampleKit.podspec初始文件](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec@2x.png  "ExampleKit.podspec初始文件")
+   ![ExampleKit.podspec初始文件](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec_1@2x.png  "ExampleKit.podspec初始文件")
+   
+   ![ExampleKit.podspec初始文件](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec_2@2x.png  "ExampleKit.podspec初始文件")
+   
+   ![ExampleKit.podspec初始文件](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec_3@2x.png  "ExampleKit.podspec初始文件")
    
  
   其中#开头的行全部为注释行，我们重点要修改的配置项如下有以下几条：
-     >  #
-   
-  >  # Be sure to run `pod spec lint ExampleKit.podspec' to ensure this is a
-
-  >  #  valid spec and to remove all comments including this before submitting the spec.
-
-  >  #
-
-  >  #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
-
-  >  #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-
-  >  #
-
-  >  Pod::Spec.new do |s|
-
-  >  s.name         = "ExampleKit"
-
-  >  s.version      = "0.0.1"
-
-  >  s.summary      = "test"
-
-  >  s.description  = <<-DESC
-
-  >  test ExampleKit
-
-  >  DESC
-
-  >  s.homepage = "http://www.baidu.com"
-
-  >  s.license      = { :type => 'MIT', :file => 'LICENSE' }
-
-  >  s.author       = { "wangyanlong" => "553836854@qq.com" }
-
-  >  s.source       = {:svn => "http://XXXX/ios_modulization/MyExampleKit"}
-
-  >  s.source_files  = "ExampleKit", "ExampleKit/ExampleKit/* ", "ExampleKit/ExampleKit/*/ * "
-
-  >  #s.public_header_files = "podtest/podfile/*.h"
-
-  >  s.frameworks = "Foundation", "UIKit"
-
-  >  s.requires_arc = true
-
-  >  end  需要注意的是在创建ExampleKi工程的时候，不要包含自动化测试框架。
+  
+  ![ExampleKit.podspec修改版](https://pingju020.github.io/assets/images/svn_pods_private/exampleKit_podspec@2x.png  "ExampleKit.podspec修改版")  需要注意的是在创建ExampleKi工程的时候，不要包含自动化测试框架。
  6. lint库。保存后在终端工具中输入如下命令：
  
  ``pod lib lint --allow-warnings``
@@ -157,7 +118,7 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
   
   所以对应的图3是失败，而图4是成功。那么很明白了，就是我们的ExampleKit在macOS上lint是失败的，在iOS上lint则是成功的。然而，我的初衷是做一个ios的lib，并没有适配macOS，怎么会lint到macOS呢？是不是platform信息设置的不对呢？
   
-  此时再去排查上面的的配置信息，就很容易发现果然少了这句：
+  此时再去排查上面的的配置信息，就很容易发现果然少了platform的配置。在s.license下面添加：
   
   ``s.platform     = :ios, "5.0"``
   
