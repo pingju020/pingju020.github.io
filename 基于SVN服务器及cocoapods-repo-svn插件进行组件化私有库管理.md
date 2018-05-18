@@ -70,19 +70,51 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
    
  
   其中#开头的行全部为注释行，我们重点要修改的配置项如下有以下几条：
-    >s.name         = "ExampleKit"
- >   >s.version      = "0.0.1"
- >   >s.summary      = "演示组件化demo"
- >
- >s.description  = <<-DESC
-  >               演示组件化demo组件
-  >                   DESC
-  >s.homepage     = http://www.baidu.com
- > >s.license      = { :type => "MIT"}
- > >s.source       = {:svn => "XXX/modulization/ExampleKit"}
- > >s.source_files  = "ExampleKit","ExampleKit/**/**"
- > >s.frameworks = "Foundation", "UIKit",
- >  需要注意的是在创建ExampleKi工程的时候，不要包含自动化测试框架。
+     >  #
+   
+  >  # Be sure to run `pod spec lint ExampleKit.podspec' to ensure this is a
+
+  >  #  valid spec and to remove all comments including this before submitting the spec.
+
+  >  #
+
+  >  #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
+
+  >  #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
+
+  >  #
+
+  >  Pod::Spec.new do |s|
+
+  >  s.name         = "ExampleKit"
+
+  >  s.version      = "0.0.1"
+
+  >  s.summary      = "test"
+
+  >  s.description  = <<-DESC
+
+  >  test ExampleKit
+
+  >  DESC
+
+  >  s.homepage = "http://www.baidu.com"
+
+  >  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+
+  >  s.author       = { "wangyanlong" => "553836854@qq.com" }
+
+  >  s.source       = {:svn => "http://XXXX/ios_modulization/MyExampleKit"}
+
+  >  s.source_files  = "ExampleKit", "ExampleKit/ExampleKit/* ", "ExampleKit/ExampleKit/*/ * "
+
+  >  #s.public_header_files = "podtest/podfile/*.h"
+
+  >  s.frameworks = "Foundation", "UIKit"
+
+  >  s.requires_arc = true
+
+  >  end  需要注意的是在创建ExampleKi工程的时候，不要包含自动化测试框架。
  6. lint库。保存后在终端工具中输入如下命令：
  
  ``pod lib lint --allow-warnings``
@@ -137,6 +169,7 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
   
 ### [](#2.2 本地测试私有库)2.2 本地测试私有库
 
+  
   将本地所有的改动提交到配置库后，终端cd命令进入MainTest工程所在目录vim Podfile并回车，点i进入编辑模式，敲入如下配置：保存输入信息退出vim。再在终端输入pod install回车即可成功加载edu_anhui_contactKi私有库。加载完成后打开edu_anhui_main.xcworkspace文件即可看到如下代码结构： 注：如果库本身还有依赖其他的私有库或者第三方库，除了要在库工程目录添加podfile文件外，更要在.podspec中添加s.dependency "引用的库名称"
 
 
