@@ -204,11 +204,89 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
    **注：此处容易出现私有库中缺少文件的情况，一般是该私有库的podspec中配置的文件存放路径不对或者没有导出导致，再仔细核查s.source_files的设置或者s.resources的设置即可。**
 
 
-### [](#2.1 将远程私有库关联到本地)2.1 将远程私有库关联到本地
+### [](#2.3 建立索引库)2.3 建立索引库
 
-将远程索引库关联到本地的方法比较简单，在终端执行如下命令：
+操作到上面的pod install通过，私有库可以正常使用话，已经意味这私有库制作完成了。但是注意上面的Podfile的这一行：
 
-``pod repo-svn add name url ``
+>pod 'ExampleKit’, :svn => 'http:XXXX/MyExampleKit’
 
-其中name为本地索引库的名称，url为远程仓库的地址
+这里的：svn => 后面实际上是配置的私有库的远程地址。这样操作，对于使用该私有库的开发人员来说，相当不方便。所以，有没有办法能使得我们像使用公共第三方库一样不显式指定私有库地址，但也可以正常使用该库呢？
+
+建立索引库即可。
+
+1. **安装cocoapods-repo-svn插件**
+   
+   建立基于svn的私有库的索引库等操作需要[cocoapods-repo-svn](https://github.com/dustywusty/cocoapods-repo-svn)插件，使用如下命令安装：
+   
+   ``sudo gem install cocoapods-repo-svn``
+   
+2. **关联本地私有库**
+   
+   在创建本地私有库的代码仓库的时候，我们已经在svn上同时创建了一个空的远程私有索引库，接下来，所以此处我们需要做的就是将该私有库关联到本地。
+   
+   执行如下命令：
+   
+   ``pod repo-svn add name url``
+   
+   其中name为本地索引库的名称，url为远程仓库的地址,建议本地索引库跟远程的私有索引库同名。
+   
+   关联完成后，我们可以输入下面的命令，查看本地索引：
+   
+   ``pod repo``
+   
+   我的本地索引库信息如下图所示：
+   
+   ![pod repo](https://pingju020.github.io/assets/images/svn_pods_private/pod_repo@2x  "pod repo")
+   
+   其中master为pod的默认索引库，另外一个就是我们刚刚建立的私有索引库。前往/Users/username/.cocoapods/repos/目录也能看到目录下master目录和我们新建的私有索引库目录。
+   
+3. **为私有库创建索引**
+   
+   在终端工具cd进入私有库的specs文件所在目录，并执行如下命令：
+   
+   ``pod repo-svn push Name xx.podsepc``
+   
+   Name即私有库的名称。
+   
+   此时，直接在终端执行 ``pod search Name`` ,就可以找到我们刚刚创建的私有库。
+   
+4. *完善引用的Podfile文件*
+   
+   打开Podfile文件后，按下i键，将之前引用ExampleKit库的Podfile修改成如下：
+   
+   >  #podfile 文件配置
+   >
+   >workspace 'test.xcworkspace'
+   >
+   >source 'https://github.com/CocoaPods/Specs.git'
+   >
+   >plugin 'cocoapods-repo-svn', :sources => [
+'http://XXX/ios_modulization_specs'
+]
+   >
+   >project 'test.xcodeproj'
+   >
+   >   #use_frameworks!个别需要用到它，比如reactiveCocoa
+   >
+   >target 'test' do
+   >
+   >platform :ios, '7.0'
+   >
+   >project 'test.xcodeproj'
+   >
+   >pod 'ExampleKit’
+   >
+   >end
+   
+   有三处改动：
+   
+   首先，添加了source说明，告诉pod默认索引库需要检索。这是pod版本升级后，使用私有库时如不特别指定检索默认索引库的话，pod只检索指定的私有索引库。
+   
+   其次，制定了检索的私有库，具体如上面 ``pligin ...``信息所示，告诉pod，需要在这个私有索引库中检索pod的私有库。
+   
+   最后，我们在pod自己的私有库时，可以和pod第三方开源库一样，直接 ``pod 'ExampleKit’`` 即可。
+   
+ 
+ ~本文完~  
+   
 
