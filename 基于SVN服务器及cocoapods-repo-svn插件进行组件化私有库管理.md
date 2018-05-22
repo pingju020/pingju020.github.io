@@ -236,7 +236,7 @@ cocoapods默认支持的远程仓库为git，而我们使用的远程仓库为SV
    
    我的本地索引库信息如下图所示：
    
-   ![pod repo](https://pingju020.github.io/assets/images/svn_pods_private/pod_repo@2x  "pod repo")
+   ![pod repo](https://pingju020.github.io/assets/images/svn_pods_private/pod_repo@2x.png  "pod repo")
    
    其中master为pod的默认索引库，另外一个就是我们刚刚建立的私有索引库。前往/Users/username/.cocoapods/repos/目录也能看到目录下master目录和我们新建的私有索引库目录。
    
