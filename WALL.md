@@ -1,3 +1,8 @@
+---
+layout: default
+---
+
+
 in the wide, open areas of outer space,beyond the shining lights of a million stars, a dark, smoky Earth can be seen, lonely and silent.
 
 the deepest seas are all but dried and gone.
