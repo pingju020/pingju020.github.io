@@ -2,7 +2,7 @@
 layout: default
 ---
 
-#[](#1st Day)1st Day
+# [](#1st Day)1st Day
 
 in the wide, open areas of outer space,beyond the shining lights of a million stars, a dark, smoky Earth can be seen, lonely and silent.
 
@@ -106,7 +106,7 @@ Looking across a bay that had dried up long ago, he saw an old BnL truck that wa
 
 WALL.E's spirits rose.
 
-#[](#2nd Day)2nd Day
+# [](#2nd Day)2nd Day
 
 WALL.E sped up as he headed toward his truck.
 
@@ -242,25 +242,25 @@ With eyes opened wide with fear, he looked down at his pet's flattened body, sea
 POP!
 
 
-#[](#4th)
-#[](#5th)
-#[](#6th)
-#[](#7th)
-#[](#8th)
-#[](#9th)
-#[](#10th)
-#[](#11th)
-#[](#12th)
-#[](#13th)
-#[](#14th)
-#[](#15th)
-#[](#16th)
-#[](#17th)
-#[](#18th)
-#[](#19th)
-#[](#20th)
-#[](#21st)
-#[](#22nd)
-#[](#23rd)
+# [](#4th)
+# [](#5th)
+# [](#6th)
+# [](#7th)
+# [](#8th)
+# [](#9th)
+# [](#10th)
+# [](#11th)
+# [](#12th)
+# [](#13th)
+# [](#14th)
+# [](#15th)
+# [](#16th)
+# [](#17th)
+# [](#18th)
+# [](#19th)
+# [](#20th)
+# [](#21st)
+# [](#22nd)
+# [](#23rd)
 
 
