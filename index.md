@@ -2,13 +2,13 @@
 layout: default
 ---
 
-# [机器人总动员](WALL)
+# [迪士尼英语故事阅读](disney/WALL)
 
 in the wide, open areas of outer space,beyond the shining lights of a million stars, a dark, smoky Earth can be seen, lonely and silent.
 
 ...
 
-[阅读原文](WALL)
+[阅读原文](disney/WALL)
 )
 
 
