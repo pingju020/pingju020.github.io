@@ -2,13 +2,13 @@
 layout: default
 ---
 
-# [迪士尼英语故事阅读](/disney/wall)
+# [迪士尼英语故事阅读](/disney/walle)
 
 in the wide, open areas of outer space,beyond the shining lights of a million stars, a dark, smoky Earth can be seen, lonely and silent.
 
 ...
 
-[阅读原文](/disney/wall)
+[阅读原文](/disney/walle)
 )
 
 
