@@ -163,7 +163,7 @@ What are we，if not accumulation of our memories？
 5⃣️to be flat broke－没钱
 －I spent all my money and now I'm flat broke.
 
-![图1](/walle_part24_note/30211539347040_.pic.jpg  "图1")
+![图1](disney/walle_part24_note/30211539347040_.pic.jpg  "图1")
 
 6⃣️money is no object－价格不重要
 －Waiter! Bring me your best champagne. Money is no object.
@@ -180,6 +180,6 @@ What are we，if not accumulation of our memories？
 1⃣️0⃣️to go broke－破产
 －Many businesses had gone broke.
 
-![图1](/walle_part24_note/30251539347098_.pic.jpg  "图1")
+![图2](disney/walle_part24_note/30251539347098_.pic.jpg  "图2")
 
 

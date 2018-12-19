@@ -148,7 +148,7 @@ Every life needs a little space. It leaves room for good things to enter it.
 4⃣️ have bigger fish to fly － 有更重要的事情等着去做
 👉 I can't attend the meeting, I had bigger fish to fly.
 
-![图1](/walle_part22_note/28721539172781_.pic.jpg  "图1")
+![图1](disney/walle_part22_note/28721539172781_.pic.jpg  "图1")
 
 5⃣️ That's the way the cookie crumbles.
 －事情就是这样
@@ -159,7 +159,7 @@ Every life needs a little space. It leaves room for good things to enter it.
 7⃣️ as red as a cherry － 很红
 －Her cheeks were as red as cherry.
 
-![图1](walle_part22_note/28741539172807_.pic.jpg  "图1")
+![图2](disney/walle_part22_note/28741539172807_.pic.jpg  "图2")
 
 8⃣️eat like a horse － 吃得很多
 － My husband eats like a horse.
@@ -170,4 +170,4 @@ Every life needs a little space. It leaves room for good things to enter it.
 1⃣️0⃣️ hard nut to crack － 一个棘手的问题或一个难搞的人
 － He is a hard nut to crack.
 
-![图1](walle_part22_note/28771539172821_.pic.jpg  "图1")
+![图3](disney/walle_part22_note/28771539172821_.pic.jpg  "图3")
