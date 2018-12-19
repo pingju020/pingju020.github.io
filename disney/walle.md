@@ -479,24 +479,225 @@ She had just tried to blow him up, but like a pet dog, he continued to follow he
 
 [章节讲义](walle_part4_note)
 
-## [](#5th)
+## [](#Chapter 5)Chapter 5 
+
+He watched her study a hill of tires.
+
+He saw his cockroach(蟑螂) try to approach EVE from behind and he
+suddenly became nervous. Her powerful sensors immediately picked up(察觉) the
+movement.
+
+She turned around and fired at the cockroach.
+
+A direct hit!
+
+The cockroach, however, was not hurt.
+
+He simply walked out of the smoking hole created by EVE's gun and, with his
+usual desire to learn more, continued to approach EVE.
+
+EVE let the cockroach get closer.
+
+She was interested to know more about him, and she let him walk up her arm.
+
+WALL.E heard EVE give out a series of electronic robot-like sounds.
+
+She was laughing!
+
+The cockroach must have tickled(逗乐) her.
+
+WALL.E's spirits rose.
+
+EVE had feelings!
+
+Then, just as suddenly, he was struck by fear again as EVE s sensor turned in his
+direction. She locked onto him with her beam(束) of blue light and fired rapidly with her laser(激光) gun.
+
+WALL.E tried his best to avoid being hit by her shots.
+
+He drove around among the small hills of rubbish around him, as EVE blew them
+up one by one. I
+
+With nowhere left to hide, WALL.E boxed himself up and shook uncontrollably.
+
+EVE stopped firing.
+
+In an electronic voice she said, ldentify(说明身份) yourself.
+
+But WALL.E heard only robotic sounds and whistles(哨子).
+
+He didn t understand what EVE was saying.
+
+She slowly approached the shaking box.
+
+The cockroach ran down EVE s arm and jumped onto his owner s body.
+
+EVE s blue light surveyed WALLoE.
+
+NEGATIVE(否定的).
+
+He was not what she was looking for.
+
+She drew back her laser gun and flew
+away.
+
+Looking out from inside his box, WALL.E watched her, completely filled with
+wonder.
+
+As EVE continued her search, WALL.E followed her to an empty BnL store.
+
+EVE studied the store, her electronic system only repeating: NEGATIVE,
+NEGATIVE, NEGATIVE.
+
+But when she looked back at the not-so-hidden WALL.E, the lttle robot grew fearful. Turning round and round in circles, he mistakenly hit a couple of shopping carts(手推车), sending them noisily down a set of stairs(楼梯).
+
+WALL.E, unluckily, also fell all the way down, too.
+
+Finally, the shameful moment ended when the carts could move no farther, and neither could WALL。E.
+
+He was stuck between the carts and a pair of doors that refused to open.
+
+EVE paid no attention to him.
+
+WALL.E began the slow process of freeing himself.
+
+That evening, WALL。E climbed to the top of the BnL power plant.
+
+He patiently waited, hoping to see EVE somewhere in the darkening sky.
+
+Suddenly, her blue light appeared in the distance, and the circuits(电路) inside him missed a beat.
+
+WALL.E watched her come in for a landing, ready to shut down(停止运转) for the night.
+
+He waited for a moment and then moved toward her.
+
+Once, he tripped by accident(意外), but luckily the noise didn' t wake her.
+
+Sure now that she was asleep, WALL.E moved closer.
+
+He carefully examined her with his robotic arms.
+
+Then, turning to some rubbish close by, he began to cut the rubbish apart using the laser beam between his eyes.
+
+The next morning, EVE awoke to find an artistic model of her made entirely of
+shining pieces of rubbish.
+
+She rose and circled the egg- shaped model. lt had bright blue glass eyes, just like hers.
+
+WALL.E watched her from behind a tower of metal(Ï /, áJ) pipes().
+
+He could see that she liked the model.
+
+Pleased with his work, he wanted to come out, but he waited a little too long...and the moment was gone.
+
+EVE flew away just as the pipes fell down--CLANK, CLANK, CLANK --onto the happy little robot s head.
+
+His metal body was already so damaged(tF) that he hardly noticed the additional damage(t5m) caused by the falling pipes.
+
+EVE spent her day surveying the city.
+
+She studied a car engine --NEGATlVE.
+
+She shut its metal door hard.
+
+A toilet- - NEGATIVE.
+
+A broken space ship -NEGATIVE.
+
+And then something different happened: EVE got caught by the sea ship s large gray magnet(t#)! Stuck to the magnet upside down, she tried to turn her body over.
+
+That did not work.
+
+She then tried to shake her body in order to free herself.
+
+But no matter how hard she tried, she could not free herself from the powerful
+magnet.
+
 ## [](#6th)
+
+
+[章节讲义](walle_part6_note)
+
 ## [](#7th)
+
+[章节讲义](walle_part7_note)
+
 ## [](#8th)
+
+[章节讲义](walle_part8_note)
+
 ## [](#9th)
+
+[章节讲义](walle_part9_note)
+
 ## [](#10th)
+
+[章节讲义](walle_part10_note)
+
 ## [](#11th)
+
+[章节讲义](walle_part11_note)
+
 ## [](#12th)
+
+[章节讲义](walle_part12_note)
+
+
 ## [](#13th)
+
+[章节讲义](walle_part13_note)
+
 ## [](#14th)
+
+[章节讲义](walle_part14_note)
+
 ## [](#15th)
+
+[章节讲义](walle_part15_note)
+
 ## [](#16th)
+
+[章节讲义](walle_part16_note)
+
 ## [](#17th)
+
+[章节讲义](walle_part17_note)
+
 ## [](#18th)
+
+[章节讲义](walle_part18_note)
+
 ## [](#19th)
+
+[章节讲义](walle_part19_note)
+
 ## [](#20th)
+
+[章节讲义](walle_part20_note)
+
 ## [](#21st)
+
+[章节讲义](walle_part21_note)
+
 ## [](#22nd)
+
+[章节讲义](walle_part22_note)
+
 ## [](#23rd)
+
+[章节讲义](walle_part23_note)
+
+## [](#24th)
+
+[章节讲义](walle_part24_note)
+
+## [](#25th)
+
+[章节讲义](walle_part25_note)
+
+## [](#26th)
+
+[章节讲义](walle_part26_note)
+
 
 
