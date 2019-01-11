@@ -5,26 +5,26 @@ layout: default
 
 ## [](#一、 背景知识)一、 背景知识
 
-1.动物们的居住地～
+### [](#1.动物们的居住地～)1.动物们的居住地～
 
 影片中为大家带来了一座现代化动物城Zootopia，这是迪士尼团队首次构想的一个由动物们自己设计，打造的现代化世界，这里是一个住着各类已进化哺乳动物的现代化乌托邦式大都市（这也符合Zootopia名字的来历哦～乌托邦的英语就是Utopia），在这座现代化城市里，进化后的动物双方也达成了和平协议，停止互相残杀的生活方式。
 
 作为一座现代化城市，动物城外观的设计取材自纽约、旧金山、拉斯维加斯、巴黎、上海、香港、北京、东京和巴西利亚等国际都市。而为了要设计出一座能够让适应于不同气候，且身高范围可从数公分到数米的各类动物共同居住的城市，制作团队还咨询了美国残疾人法案的专家以及暖通空调系统的设计师，可见制作团队的精心打造啊～
 
-2.关于乌托邦的二三事～
+### [](#2.关于乌托邦的二三事～)2.关于乌托邦的二三事～
 
 Utopia最早是英国哲学家，空想社会主义者托马斯·莫尔爵士在1516年出版的一部名著的书名, 乌托邦的理论体现了人类对社会的一种憧憬，是人类思想意识中最美好的社会：人人平等，没有压迫，就像世外桃源。
 
 疯狂动物城也是建立在理想乌托邦的基础上的，为动物们构建了一个“和谐”世界：食肉动物和食草动物可以共同生活，即使是天敌也可以成为朋友；食肉动物保护这座城市，食草动物在这个世界里安居乐业；大型动物和小型动物都有自己的生活和工作场所；每种动物都可以自由自在的在城市中生活。
 
-3. 食肉动物&食草动物
+### [](#3. 食肉动物&食草动物)3. 食肉动物&食草动物
 
 食肉动物：主要是以肉为食物的动物或一些性情凶猛的动物，比如老虎，狮子，猎豹等～影片中出现了很多肉食动物，比如red fox（狐狸）African lion（非洲狮子）cheetah（猎豹）otter（水獭）fennec fox（耳廓狐）arctic shrew（鼩鼱）honey badger（蜜獾）black jaguar（美洲豹）polar bear（北极熊）wolf（狼）.
 
 食草动物：动物吃植物是自然界食物链的基础，自然界中不少动物是以植物为食的，食草动物的总数也远大于食肉动物，当然在Zootopia这座城市里，也有很多食草动物，比如rabbit（兔子）gazelle（羚羊）sheep（绵羊）ram（公羊）oryx（大羚羊）cape buffalo（非洲水牛）yak（牦牛）rhinoceros（犀牛）elephant（大象）moose（驼鹿）.
 大家在阅读的过程中，也可以留意一下文中出现的动物种类哦～
 
-4.影片反响
+### [](#4.影片反响)4.影片反响
 
 《疯狂动物城》的制作受到了一些电影及电视剧的影响，也是对那些作品的致敬，电影中许多元素都引用自迪士尼先前的几部经典动画作品，包含《小飞象》，《冰雪奇缘》，《长发公主》，《超能陆战队》等，其全球票房也高达10.2亿美元，凭借创纪录的票房及出色的影片故事，《疯狂动物城》荣获了第89届奥斯卡“最佳动画长片”奖，也被选为2016美国电影学会十佳电影～
 
@@ -33,15 +33,15 @@ Utopia最早是英国哲学家，空想社会主义者托马斯·莫尔爵士在
 
 1. 「rule」在文中做动词的意思表示“统治”，（常见的意思表示“规则”）
 
-原句: these were the forces that ruled our world.
+   原句: these were the forces that ruled our world.
 
-e.g. Million years ago, dinosaurs（恐龙）ruled the earth.
+   e.g. Million years ago, dinosaurs（恐龙）ruled the earth.
 
 2.「terribly」在文中的意思表示“非常”（常见意思表示“糟糕地”）
 
-原句: After a terribly long moment of silence, Judy sat up…
+   原句: After a terribly long moment of silence, Judy sat up…
 
-e.g. Your father misses you terribly.
+   e.g. Your father misses you terribly.
 
 3.「read」在文中指 “（海报上）写着”，（常见意思表示“阅读，理解”）
 
@@ -199,7 +199,7 @@ predator是指像jaguar美洲虎这样的食肉动物；prey是指像Judy这样�
 
 这里其实呢我们可以想象出Judy的爸爸应该是一个老实安分的人，不希望打破常规，更不希望自己的女儿去冒险，做对生命有威胁的事情，在他根深蒂固的思想里，兔子是不可能去做警察的，所以他也觉得Judy想做警察完全是天方夜谭～
 
-16. “Jude? Where the hell did she go?”
+16.  “Jude? Where the hell did she go?”
 
 「hell」的本意是地狱，在这里the hell加入特殊疑问句中是很口语化的表达，一般表示说话人的情绪很极端急躁等（但在正式场合还是不要使用哦～会有些不礼貌）；
 这里是Judy爸爸突然找不到她的一种激动“Judy,她到底去哪儿了”。
@@ -211,12 +211,20 @@ predator是指像jaguar美洲虎这样的食肉动物；prey是指像Judy这样�
 
 ## [](#四、 今日短语)四、 今日短语
 
-ring out 发出响亮的声音，大声响起
-be scared of 对…感到恐惧
-land on 降落于…
-hunt for 寻找，搜寻
-stick out 伸出，突出显眼
-tear off 撕下，扯掉
-look around for 到处寻找
-pay attention to 将注意力放在…上
-go after 追随
+* ring out 发出响亮的声音，大声响起
+
+*  be scared of 对…感到恐惧
+
+* land on 降落于…
+
+* hunt for 寻找，搜寻
+
+* stick out 伸出，突出显眼
+
+* tear off 撕下，扯掉
+
+* look around for 到处寻找
+
+* pay attention to 将注意力放在…上
+
+* go after 追随
