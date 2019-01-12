@@ -277,5 +277,147 @@ Once, she knocked down a male rhino ten times her size during a final boxing mat
 
 ---------
 
+## [](#Chapter 3)Chapter 3
+
+On graduation day, Judy took her place among the other graduates.
+
+The ceremony included the rhino who she had beaten earlier.
+
+He was sporting a fat lip and a black eye.
+
+The mayor, a lion named Leodore Lionheart, stepped up to the stage.
+
+"As mayor of Zootopia, I am proud to announce that my Mammal Inclusion Initiative has produced its first police academy graduate.
+
+The best trainee officer of her class...ZPD's very first rabbit police officer, Judy Hopps.
+
+Assistant Mayor Bellwether, her police badge?" the mayor said to small sheep standing nearby.
+
+"Oh! Yes. Right,"said Bellwether.
+
+"Judy, it is my great privilege to officially assign you to the heart of Zootopia: Precinct One, City Center," Lionheart said.
+
+Judy walk across the stage to the sound of deafening cheers and claps---the loudest coming from her parents, even as Stu sobbed.
+
+Mayor Lionheart handed Judy her diploma while Bellwether stepped forward and  pinned her ZPD badge onto her uniform.
+
+"Congratulations, Officer Hopps."
+
+"I won't let you down. This has been my dream since I was a kid," said Judy.
+
+"It's a real proud day for us little guys." Bellwether whispered.
+
+"Bellwether, make room, will you？" said Lionheart, smiling broadly.
+
+"All right, Officer Hopps. Let's see those teeth!"
+
+A photographer positioned Judy with Mayor Lionheart and Bellwether to take a photo.
+
+But Lionheart edged Bellwether out of the photo.
+
+Days later, Judy's parents, along with several of her brothers and sisiters, accompanied her t the train station.
+
+"We're real proud of you, Judy," said Bonnie.
+
+"Yeah.Scared, too," said Stu.
+
+"Really, it's combination of 'proud-scared.' I mean, Zootopia. it's so far away and such a big city."
+
+"Guys, I've been working for this my whole life," Judy told her parents, trying to hide how thrilled she really was.
+
+"We know," said Bonnie. "And we're just a little excited for you, but terrified."
+
+"'The only thing we have to fear is fear itself,'" said Judy.
+
+"And also bears," said Stu. "We have bears to fear, too. To say nothing of lions, wolves..."
+
+"Wolves?" Bonnie asked, confused.
+
+"... weasels...," Stu continued.
+
+"You play cards with a weasel," said Bonnie.
+
+"And he cheets like there's no tomorrow. Pretty much all predators do--and Zootopia's full of'em. And foxes are the worst."
+
+"Actually, your father does have a point there," added Bonnie. "It's in their biology. Remember what happend with Gidoen Grey?"
+
+"When I was nine," said Judy. "Gideon Grey was a jerk who happened to be a fox. I know plenty of bunnies who are jerks."
+
+"Sure. We all do. Absolutely," said Stu. "But just in case, we made you a little care package to take with you." he held out a bag.
+
+"And I put some snacks in there," said Bonnie.
+
+Judy looked inside and saw a bunch of pink spray cans.
+
+"This is fox repellent," explained Stu, picking one up.
+
+"Yeah, that's safe to have," said Bonnie.
+
+"This is to scare off foxes...," Stu said, pointing at something that looked like an air horn.
+
+"That's all she needs," Bonnied said, trying to stop Stu from getting carried away.
+
+"Check this out!" Stu said as he pulled out a fox Taser and turned it on.
+
+The sudden, sharp sounds of electric currents began issuing forth from the Taser.
+
+"Oh, for goodness' sake! She has no need for a fox Taser, Stu." 
+
+"Come on. When is there not a need for a fox Taser?" asked Stu.
+
+"Okay, I will take this to make you stop talking," said Judy.
+
+She took the pink can of fox repellent as the train approached.
+
+"Brilliant! Everyone wins!" Stu cried out happily.
+
+"Arriving! Zootopia Express!" called the conductor.
+
+"Okay. Gotta go. Bye!" said Judy, hearing for the train.
+
+Stu and Bonnie held back tears as they watched their daughter walk off.
+
+Suddenly, Judy turned back and ran to her parents.
+
+She hugged them both tightly. "I love you guys," she said.
+
+"Love you, too!" said Bonnie.
+
+After one more hug, Judy jumped onto the train.
+
+"Aw hell, here come the tears," said Stu sa fat teardrops started flowing down his cheeks.
+
+"Ahhahoho jeesh..."
+
+"Oh, Stu, pull it together," whispered Bonnie.
+
+The big crowd of bunnies watched Judy go, and as the train pulled away, they ran next to it, waving and shouting their goodbyes.
+
+"Bye, everybody! Bye!" Judy called.
+
+When their faces disappeared into the distance, Judy climbed to the observation area, looked ahead out of the glass window and took a deep breath.
+
+She pulled out her phone and clicked on some music, feeling like her life was about to begin.
+
+As the train came around a bend, Judy looked intently out the window at the remarkable sight in the distance: Zootopia.
+
+She pressed her face against the glass and watched each district of the city pass by.
+
+Judy exited the train at Centrel Station, which served downtown Zootopia, and made her way outside into the city's central plaza.
+
+It was astonishing! She took out her ear-phones and let the lound and confusing city sounds wash over her as she looked around in amazement.
+
+Animals of all shapes and sizes rushed by, hurrying this way and that.
+
+It was a far cry from Bunnyburrow!
+
+She looked down at her phone and checked her maps app to figure out which way to go.
+
+
+[章节讲义](zootopia_part3_note)
+
+---------
+
 ## [](#Chapter 1)Chapter 1
+
 
