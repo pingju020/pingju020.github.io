@@ -418,6 +418,334 @@ She looked down at her phone and checked her maps app to figure out which way to
 
 ---------
 
-## [](#Chapter 1)Chapter 1
+## [](#Chapter 4)Chapter 4
+
+When she found her apartment building, the owner of the building, Dharma, an armodillo, led her to a little apartment.
+
+"Welcome to the Grand Pangolin Arms," said Dharma, stepping aside to let Judy in, continued "We offer free delousing services once a month. Don't lose your key."
+
+At that moment, Kudu and Oryx, Judy's neighbors, passed in the hallway.
+
+Judy greeted them warmly. "Oh, hi, I'm Judy. Your new neighbor."
+
+"Year, well, we're loud," said Kudu.
+
+"Don't expect us to aplogize for it," added Oryx.
+
+The two hurried off, banging the door of their apartment loudly behind them.
+
+Dharma had left as well, leaving Judy alone in her apartment for the first time.
+
+She looked around.
+
+"Oil-covered walls...broken bed...," said Judy.
+
+Then loud voices came from the other side of the wall:"Shut up!"
+
+"You shut up!"
+
+"NO! You shut up!"
+
+"Crazy neighbors," Judy said, as she lay down onto the bed with a big smile."I love it!"
+
+Beep. Beep. Beep.
+
+At the sound of her morning alarm, Judy sprang out of bed.
+
+She washed, brushed, and bathed.
+
+Then she put on her vest, pinned on her badge, and fastened her belt.
+
+She was ready to protect the city! She glanced at the pink can of fox repellent sitting on the bedside table and walked out, leaving it behind.
+
+But after a moment, she reached back in the room and took it with her--just in case.
+
+She left her apartment and headed toward the Zootopia Police Department for her first day on job!
+
+Judy's eyes widened as she entered the disordered and loud ZPD.
+
+Big strong cops pushed criminals through the entrance hall as people rushed around in every direction.
+
+She avoided a few large, Well-built animals before finally finding her way to the front desk.
+
+There, a round, fat, friendly-looking cheetah sat chatting with some other cops.
+
+Judy smiled at him as she approached, but he couldn't see her because she was shaorter than the desk.
+
+"Excuse me!" Judy called up to the desk.
+
+"Down here.
+
+Down.
+
+Here.
+
+Hi."
+
+The cheetah moved forward over the desk and saw Judy standing there in her uniform.
+
+"O-M goodness!" he said."They really did hire a bunny. What! I gonna tell you; you are even cuter than I thought you'd be."
+
+Judy made a face. "Oh, uh, I'm sure you didn't know, but for us rabbits...word 'cute' is a--it's a little--"
+
+"Oh! I am so sorry. Me, Benjamin Clawhauser, the guy everyone thinks is just a fat, donut-loving cop, generalizing like that...," he said apologetically.
+
+"It's okay. Oh, um, actually you've--actually--" Judy hesitated as she tried to figure out how to say it.
+
+"There's a--in yout neck--the fold...there's--"
+
+Clawhauser removed a small donut from user a rall of neck fat. "There you went, you  little troublemarker!" said Clawhauser to the donut.
+
+Then he joyfull put all of it into his mouth.
+
+"I should get to roll call, so.. which way do I...?" Judy asked.
+
+"Oh!" Clawhauser said with his mouth full of donut. "The office is over there to the left."
+
+"Great, thank you!" Judy said, and hurried off.
+
+"Aw.. that poor little bunny's gonna get eaten alive," he said, watching her go.
+
+Inside the office, rhinos, buttalo, hippos, and elephants prepared for work.
+
+They towered over Judy, but she didn't mind.
+
+She excitedly climbed up into a massive, elephant-sized chair and looked around the room.
+
+"Hey, Officer Hopps," Judy extended her paw to an enormous rhino sitting next to her.
+
+The name on his badge read "McHorn."
+
+"You ready to make the world a better place?" she asked sincerely.
+
+McHorn rolled his eyes and gave a short, loud laugh through his nose.
+
+He then gave her an unwilling fist bump, nearly knocking her off her chair.
+
+"TEN-HUT!" shouted one of the officers as Police Chief Bogo, a no-nonsense buffalo, entered the room.
+
+Everyone instantly fell in line and started banging ther tables with their fists.
+
+"All right, all right. Everybody sit," said Bogo. "I've got three things on hand that I need to talk about.
+
+First, we need to acknowledge the elephant in the room." He nodded toward an elephant officer. "Francine, happy birthday."
+
+The shy elephant turned red from embarrassment as the cops clapped and cheered.
+
+"Number two: there are some new police officers with us I should intoduce. But I'm not going to, because I don't care."
+
+Bogo moved toward a map.
+
+"Finally, we have fourteen missing mammal cases," he said, gesturing to the map.
+
+"FOURTEEN CASES. Now, that's more than we've ever had, and City Hall is right up my tail to solve them.
+
+This is our most important case. Tasks!"
+
+Bogo began barking out tasks for the cops as one of the officers handed out case files.
+
+"Officer Grizzoli, Fangmeyer, Delgato: your teams take missing mammals from the Rainforest District.
+
+Officers McHorn, Rhinowitz, Wolfard: your teams take Sahara Square.
+
+Officers Higgins, Snarlov, Trunkaby: Tundratown.
+
+And finally, our first bunny, Officer Hopps."
+
+Judy sat up, she'd been waiting anxiously for her task.
+
+Bogo took the last case file from Higgins and held it dramatically in the air as he looked at Judy.
+
+"Parking duty. Dismissed!"
+
+"Parking duty?" asked Judy quietly. She hurried after Bogo. "Uh, Chief? Chief Bogo?"
+
+Bogo looked around and saw no one until he looked down to see Judy at his ankles.
+
+"Sir, you said there are fourteen missing mammal cases."
+
+"So?"
+
+"So I can  handle one. You probably forgot, but I was top of my class at the academy."
+
+"Didn't forget. Just don't care."
+
+"Sir, I did not join the police force to keep up appearances. I can help!"
+
+"Well, then writing a hundred tickets a day should be easy," said Bogo, walking out and shutting the door loudly behind him.
+
+"A hundred tickets," said Judy, stamping her foot on the groud.
+
+She turned toward the closed door and shouted, "I'm gonna write two hundred tickets! Before noon!"
+
+
+[章节讲义](zootopia_part4_note)
+
+---------
+
+## [](#Chapter 5)Chapter 5
+
+Sporting her traffic-police hat and a bright-orange vest, Judy climbed into her tiny traffic-police cart, fastened her seat belt, and put on her shades.
+
+She pressed the cart's gas pedal down with her foot and took off...very slowly.
+
+Judy's ears twisted and turned as she used her excellent hearing skills to listen  for parking meters that had run out of time.
+
+Each time one of the meters ringed, she dashed over and wrote a ticket.
+
+She ticketed dozens of cars of every size--moose cars, mouse cars, and everything in between.
+
+"Boom! Two hundred tickets before noon," she said proudly.
+
+She returned to find out that the parking meter for her own traffic-police cart had also run out if time.
+
+"Two hundred and one," she said with a self-satisfied smile as she wrote herself a ticket.
+
+Then the sound of a car horn and an angry sheep yellong out his window interrupted her moment.
+
+"Watch where you're going, fox!" the sheep yelled.
+
+Judy saw a red fox across the street and eyed him suspiciously.
+
+Then she shook her head and scolded herself for being suspicious without a real reason.
+
+But when she saw him look around before sneaking into Jumbeaux's Cafe, she crossed the road and looked in through the window.
+
+He was nowhere to be seen.
+
+Now completely suspicious, Judy unbuttoned the pink can of fox repellent from her waist-belt and headed inside.
+
+The cafe sold extra-large sized ice cream that were made and served by elephants.
+
+The elephants used their trunks to pick up and put ice cream into bowls.
+
+Then, they used their trunks to pour pieces of nuts and small slices of fruit on top of the ice cream.
+
+Judy spotted the fox at the front of the line.
+
+Jerry Jumbeaux, Jr., the elephant working behind the counter, yelled at the fox.
+
+"Listen, I don't know what you're doing sneaking around during daylight hours, but I don't want any trouble here.
+
+So hit the road!"
+
+"I'm not looking for any trouble either, sir," said the fox innocently, "I simply want to buy  a Jumbo-pop for my little boy," he said, reaching behind him.
+
+"You want the red or the blue, son?"
+
+When Judy noticed the little child holding on to the fox's leg, she felt awful for jumping to conclusions.
+
+"I'm such a...," Judy whispered to herself as she turned to leave.
+
+"Listen, mister. There aren't any fox ice cream shops in your part of town?"
+
+"There are. It's just, my boy--" The fox patted the boy's fur.
+
+"This silly little fella--he loves all things elephant.
+
+Wants to be one when he grows up.
+
+Who am I to destroy the little guy's dreams?"
+
+The boy pulled up the top of his elephant costume over his head.
+
+Now he looked like a tiny baby elephant.
+
+He made a cute little toot-toot soud with his toy elephant truk.
+
+Judy smiled.
+
+Realizing she still had it out, she quickly put her fox repellent back into her belt.
+
+Jerry pointed to a sigh behind him.
+
+"Look, you probably can't read. fox, but the sign says: 'WE RESERVE THE RIGHT TO REFUSE SERVICE TO ANYONE.' So beat it."
+
+"You're holding up the line," said an annoyed elephant, waiting behind the two foxes.
+
+The baby fox looked as if he was about to cry.
+
+Judy marched up to the counter and flashed her police badge at Jerry.
+
+"Hello? Excuse me?" said Judy.
+
+"You'r gonna have to wait your turn like everyone else, meter maid," said Jerry.
+
+"Actually...I'm an officer. Just had a quick question.
+
+Are your customers aware that they're getting digusting nose fluid with their cookies and cream?"
+
+"What are you talking about?" asked Jerry, annoyed.
+
+"Well, I don't want to cause you any trouble, but I believe dealing ice cream without wearing gloves over trunks is illegal, which is kind of a big deal.
+
+Of course, I could let you off with a warning.
+
+But only if you were to glove those trunks and--I don't know--finish selling this nice dad and his son a...what was it?" Judy smiled at the fox.
+
+"A Jumbo-pop," said the fox.
+
+"A Jumbo-pop," said Judy firmly.
+
+Jerry started for a moment, then said, "Fifteen dollars."
+
+The fox turned to Judy.
+
+"Thank you so much. Thank you."
+
+He dug through his pockets before stopping in disbelief.
+
+"Are you kidding me? I don't have my wallet.
+
+I'm sorry, son, worst birthday ever." The fox bent down to give the child a kiss, then turned to Judy.
+
+"Thanks anyway."
+
+Judy put some cash on the counter.
+
+"Keep the change," she said.
+
+Once Jerry gave them the Jumbo-pop, Judy held the door as the fox and his little boy exited the cafe.
+
+"Officer, I can't thank you enough," said the fox.
+
+"So kind, really. Can I pay you back?"
+
+"Oh no, my treat.
+
+It just--you know, it burns me up to see folks with such narrow-minded attitudes toward foxes," Judy said.
+
+"well, I just wanna say, you're a great dad and just a...a real smart fellow."
+
+"Ah, well, that is high praise. It's rare that I find someone who does not look down upon me... Officer..."
+
+"Hopps. Mr. ...," Judy said, not catching the sarcasm that was evident in the fox's voice.
+
+"Wilde. Nick Wilde."
+
+Judy bent down toward the little fox.
+
+"And you, little guy, you want to be an elephant when you grow up...
+
+you be an elephant--because this is Zootopia, and anyone can be anything." She placed a ZPD badge sticker on the boy's chest.
+
+"All right, here you go--" Nick said, handing him the huge Jumbo-pop.
+
+"Two paws. Yeah. Aw, look at that smile, that's a happy birthday smile! Give her a little bye-bye toot-toot."
+
+The cute little fox blew through his fake elephant trunk.
+
+"Toot-toot!" said Judy happily.
+
+Then she walked off with a spring in her step.
+
+It felt great to help somebody in need!
+
+
+[章节讲义](zootopia_part5_note)
+
+---------
+
+## [](#Chapter )Chapter 1
 
 
