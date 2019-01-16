@@ -746,6 +746,143 @@ It felt great to help somebody in need!
 
 ---------
 
-## [](#Chapter )Chapter 1
+## [](#Chapter 6)Chapter 6
 
+A little while later, Judy was writing parking tickets in Sahara Square when she noticed Nick and his kid a few blocks away.
+
+"Oh! Hey, little toot-toot!" she called, waving, but they didn't see her.
+
+She started toward them but stopped suddenly when she realized what they were doing.
+
+They were heating the large Jumbo-pop ice cream she had bought for them in the hot sun.
+
+Then they were channeling the juice from the ice cream into little jars.
+
+Not sure what to make of this, Judy continued to watch Nick and his kid pack the full jars into the back of a van.
+
+Her eyes nearly fell out of her head when she saw Nick's little son get into the driver's seat! Then they drove off.
+
+Judy was shicked and confused.
+
+She jumped back ino her cart and followed them to the coldest section of Zootopia--Tundratown.
+
+Nick's son was pushing his little paws into the snow to make paw-like shapes.
+
+Nick then put sticks at the bottom of each of these shapes.
+
+Then the two poured the juice from the Jumbo-pop into the paw-like snow shapes to create dozens if smaller ice pops! Judy looked on, horrified.
+
+She couldn't believe it!
+
+Judy followed them again, this time to Savanna Central, where they set up a stand and sold "pawosicles" at marked-up prices to lemmings.
+
+"Pawpsicles! Get your pawpsicles!" barked Nick.
+
+One lemming bought an icy treat, and then the rest of them followed.
+
+In an instant, the frozen desserts were completely sold out!
+
+Once the lemmings finished their pawpsicles, they threw the sticks into a recycling can.
+
+When the lemmings were gone, a small door opend in the recycling can.
+
+The little fox--who, Judy realized, was not a cute child but a fully grown Fennec fox named Finnick--stepped out of the can.
+
+He had a pile of used pawpsicle sticks with him.
+
+Judy was having trouble believing her eyes.
+
+She continued to follow Nick and Finnick to Little Rodentia.
+
+There, Nick set down the pile of used sticks in front of a mouse construction worker and shouted, "Lumber delivery!"
+
+"What's with the color?" asked the construction worker.
+
+"The color? it's red wood," answered Nick, disregarding the question as he accepted his payment.
+
+The construction workers dragged the sticks away, and Judy watched in wonder as Nick handed Finnick his share of the cash.
+
+"Thirty-nine...forty. There you go. Way to work that cute child act, big guy.
+
+What, no kiss bye-bye for Daddy?"
+
+"You kiss me tomorrow, I'll bite your face off," said Finnick in a deep, grown-up voice.
+
+"Later."Finnick jumped into his van and drove off, playing loud rap music as he rode away.
+
+Judy appreared in front of Nick, her face burning with anger.
+
+"I stood up for you. And you lied to me! You liar!" she yelled.
+
+"It's called a hustle, sweetheart," said Nick coolly.
+
+"And I'm not the liar, he is." Nick pointed behind Judy.
+
+She turned but saw no one standing there.
+
+When she turned back around, Nick was gone! Then she spotted his tail disappearing behind a corner.
+
+"Hey," she said, hurrying to catch up as Nick walked along.
+
+"All right, tricky Nick, you're under arrest."
+
+"Really, for what?"
+
+"Hmm, I don't know.
+
+How about selling food without a permit, transporting undeclared commerce across district lines, false advertising--"
+
+"Permit." Nick smiled as he showed Judy the document.
+
+"Receipt of declared commerce." He showed her a receipt.
+
+"And I did not falsely advertise anything. Take care."
+
+"You told that mouse the pawpsicle sticks were redwood," Judy said.
+
+"That's right," said Nick, looking satisfied with himself.
+
+"Red. Wood. With a space in the middle. Wood that is red. You can't touch me, Carrots.
+
+I've been doing this since I was born."
+
+"You're gonna want to stop yourself from calling me Carrots."
+
+"My bad," said Nick.
+
+"I just naturally assumed you came from some little carrot-choked Podunk, no?"
+
+"Ah, no," Judy replied, as if to say "obviously not."
+
+"Podunk is in the Deerbrooke County. I grew up in Bunnyburrow."
+
+"Okay. Tell me if this story sounds familiar." Nick's voice changed as he began to talk quickly and bravely.
+
+"Innocent little country bunny with good grades and big ideas decides,
+
+'Hey, look at me, I'm gonna move to Zootopia, where predators and prey live in haymony!'
+
+Only to find--whoopsie, we don't all get along.
+
+And that dream of being a big-city cop? Double whoopsie! She's a meter maid.
+
+And whoopsie number three-sie, no one cares about her or her dreams.
+
+Soon enough those dreams die and our bunny sinks into mental and literal despair, living in a box under a bridge.
+
+Until, finally, she has no choice but to go back home with that cute furry tail between her legs to become--You're from Bunnyburrow?
+
+So let's say a carrot farmer?
+
+Sound about right?"
+
+Judy stood speechless.
+
+She couldn't believe Nick had figured out her fears so quickly.
+
+[章节讲义](zootopia_part6_note)
+
+---------
+
+## [](#Chapter )Chapter 1
 
