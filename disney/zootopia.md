@@ -884,5 +884,159 @@ She couldn't believe Nick had figured out her fears so quickly.
 
 ---------
 
+## [](#Chapter 7)Chapter 7
+
+A passing rhino almost pushed her down, knocking her out of her thoughts.
+
+"Be careful now," warned Nick.
+
+"Or it won't just be your dreams breaking down into little pieces."
+
+"Hey, hey!" she said, trying to pull herself together.
+
+"No one tells me what I can or can't be!
+
+Especially not some jerk who never had the courage to try and be anything more than a pawpsicle hustler."
+
+"All right, look, everyone comes to Zooyopia thinking they can be anything they want.
+
+Well, you can't. You can only be what you are." He pointed to himself.
+
+"Smart Fox." Then he pointed to her.
+
+"Dumb bunny."
+
+"I am not a dumb bunny."
+
+"Right. And that's not wet cemment."
+
+Judy looked down to see that her legs were stuck in sticky wet cement.
+
+She cried out in horror.
+
+"You'll never be a real cop," Nick said in an unpleasant voice.
+
+"You're a cute meter maid, though. Maybe an administrator one day. Hang in there."
+
+Annoyed, Judy watched as Nick walked off.
+
+Then she set about pulling her paws out of the cement.
+
+Shhhk! Shhhk! Judy dragged her cement-covered paws across the welcome mat outside her apartment before going in.
+
+A sad song filled the air when she turned on the radio.
+
+She switched stations.
+
+It was another sad song.
+
+And that was how her day was going.
+
+After listening to a few joyless songs, she dragged her feet over to the kitchen and popped in  a "Carrots for One" microwave dinner.
+
+Beep! Beep! Once it was done, she removed the cover, uncovering a single, tiny dried up carrot.
+
+With her ears hanging low from sadnedd, Judy sat down at her small table and ate her dinner alone.
+
+Brrring! Brrring! Judy's cell phone rang.
+
+It was her parents calling for a video chat.
+
+SHe shook her head, sighed, and forced a smile before answering.
+
+"Oh, hey! It's my parents...," she said, trying to sound cheerful.
+
+"There she is!" said Bonnie. "Hi, sweetheart!"
+
+Stu's face popped onto the screen.
+
+"Hey there, Judy the Dude! How was your first day on the force?"
+
+"It was real great," said Judy, knowing this was a complete lie.
+
+"Yeah? Everything you ever hoped?" asked Bonnie.
+
+"Absolutely, and more! Everyone's so nice.
+
+And I feel like I'm really making a diffrence--"
+
+"Wait a second," said Stu, popping his head onto the screen again.
+
+"Holy hell, Bonnie! Look at that!"
+
+Bonnie stared into the screeen trying to see what Stu was so excited about.
+
+"Oh my sweet heaven! Judy, are you a meter maid?"
+
+Judy had forgotten she was still wearing her vest and that her hat was on the chair.
+
+Feeling embarrassed, she tried to save face.
+
+"What? Oh, this? No. It's just a temporary--"
+
+"It's the safest job on the force!" Bonnie cried out happily.
+
+"She's not a real cop! Our prayers have been answered!" said Stu, filled with joy.
+
+"Glorious day!"
+
+"Meter maid! Meter maid! Meter maid!" chanted Stu.
+
+"Dad. Dad!" said Judy, feeling uncomfortable and just wanting to end the conversation.
+
+"You know what? This has been great, guys, but it's been a long day--"
+
+"That's right. You get some rest!" said Bonnie.
+
+"Absolutely. Those meter aren't gonna maid themselves," added Stu.
+
+They said goodnight and Judy hung up, feeling even sadder than she had before.
+
+As she took off her vest, she turned on more sad music.
+
+Through the wall, Oryx yelled: "Hey, bunny! Turn down that cheerless music!"
+
+"Leave the meter maid alone!" yelled Kudu.
+
+"Didn't you hear her conversation? She feels like a failure!"
+
+Judy turned down the music as Oryx and Kudu continued to yell and argue.
+
+"Tomorrow's another day," she said quietly to herself.
+
+"Yeah! but it might be worse!" yelled Oryx.
+
+Sad and tired, Judy settled in for the night, wondering what tomorrow would bring.
+
+The next day, Judy was back to ticketing cars parked at parking meters that had run out of time.
+
+She set a ticket down on a van, ans a moose yelled at her: "I was thirty second over!"
+
+As another meter rang, Judy wrote the ticket and place it on the front window of a tiny car.
+
+"You're a real hero, lady!" yelled an angry mouse.
+
+Ding! Judy wrote out a third ticket, which a hippo picked up.
+
+Her small child looked at Judy and said,"My mommy says she wishes you were dead."
+
+An angry driver shouted,"Uncool, rabbit. My tax dollars pay your salary."
+
+Later, Judy got into her cart and turned the key.
+
+But the engine wouldn't start.
+
+She banged her head against the driveing wheel, accidentally sounding the car horn.
+
+"I am a real cop," she whispered to herself, weakly.
+
+"I am a real cop.
+
+I am a real cop..."
+
+[章节讲义](zootopia_part7_note)
+
+---------
+
 ## [](#Chapter )Chapter 1
 
